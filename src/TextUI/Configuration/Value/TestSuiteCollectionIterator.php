@@ -23,8 +23,9 @@ final class TestSuiteCollectionIterator implements Countable, Iterator
 {
     /**
      * @psalm-var list<TestSuite>
+     * @readonly
      */
-    private readonly array $testSuites;
+    private array $testSuites;
     private int $position = 0;
 
     public function __construct(TestSuiteCollection $testSuites)

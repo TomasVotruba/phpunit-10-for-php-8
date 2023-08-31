@@ -14,7 +14,10 @@ namespace PHPUnit\TestRunner\TestResult;
  */
 abstract class Subscriber
 {
-    private readonly Collector $collector;
+    /**
+     * @readonly
+     */
+    private Collector $collector;
 
     public function __construct(Collector $collector)
     {

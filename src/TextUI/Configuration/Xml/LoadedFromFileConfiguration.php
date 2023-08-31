@@ -23,8 +23,14 @@ use PHPUnit\TextUI\XmlConfiguration\Logging\Logging;
  */
 final class LoadedFromFileConfiguration extends Configuration
 {
-    private readonly string $filename;
-    private readonly ValidationResult $validationResult;
+    /**
+     * @readonly
+     */
+    private string $filename;
+    /**
+     * @readonly
+     */
+    private ValidationResult $validationResult;
 
     public function __construct(string $filename, ValidationResult $validationResult, ExtensionBootstrapCollection $extensions, Source $source, CodeCoverage $codeCoverage, Groups $groups, Logging $logging, Php $php, PHPUnit $phpunit, TestSuiteCollection $testSuite)
     {

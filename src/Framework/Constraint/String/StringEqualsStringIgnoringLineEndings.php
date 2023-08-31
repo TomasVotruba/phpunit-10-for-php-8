@@ -17,7 +17,10 @@ use function strtr;
  */
 final class StringEqualsStringIgnoringLineEndings extends Constraint
 {
-    private readonly string $string;
+    /**
+     * @readonly
+     */
+    private string $string;
 
     public function __construct(string $string)
     {

@@ -17,7 +17,10 @@ use function sprintf;
  */
 abstract class TraversableContains extends Constraint
 {
-    private readonly mixed $value;
+    /**
+     * @readonly
+     */
+    private mixed $value;
 
     public function __construct(mixed $value)
     {

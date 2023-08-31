@@ -19,7 +19,10 @@ use Throwable;
  */
 final class MigrateConfigurationCommand implements Command
 {
-    private readonly string $filename;
+    /**
+     * @readonly
+     */
+    private string $filename;
 
     public function __construct(string $filename)
     {

@@ -23,8 +23,9 @@ final class GroupCollectionIterator implements Countable, Iterator
 {
     /**
      * @psalm-var list<Group>
+     * @readonly
      */
-    private readonly array $groups;
+    private array $groups;
     private int $position = 0;
 
     public function __construct(GroupCollection $groups)

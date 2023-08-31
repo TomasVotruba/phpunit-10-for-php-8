@@ -16,7 +16,10 @@ namespace PHPUnit\Event\TestData;
  */
 final class DataFromDataProvider extends TestData
 {
-    private readonly int|string $dataSetName;
+    /**
+     * @readonly
+     */
+    private int|string $dataSetName;
 
     public static function from(int|string $dataSetName, string $data): self
     {

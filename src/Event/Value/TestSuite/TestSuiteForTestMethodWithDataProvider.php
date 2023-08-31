@@ -20,15 +20,23 @@ final class TestSuiteForTestMethodWithDataProvider extends TestSuite
 {
     /**
      * @psalm-var class-string
+     * @readonly
      */
-    private readonly string $className;
+    private string $className;
 
     /**
      * @psalm-var non-empty-string
+     * @readonly
      */
-    private readonly string $methodName;
-    private readonly string $file;
-    private readonly int $line;
+    private string $methodName;
+    /**
+     * @readonly
+     */
+    private string $file;
+    /**
+     * @readonly
+     */
+    private int $line;
 
     /**
      * @psalm-param non-empty-string $name

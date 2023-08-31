@@ -37,22 +37,51 @@ final class MockMethod
 
     /**
      * @psalm-var class-string
+     * @readonly
      */
-    private readonly string $className;
+    private string $className;
 
     /**
      * @psalm-var non-empty-string
+     * @readonly
      */
-    private readonly string $methodName;
-    private readonly bool $cloneArguments;
-    private readonly string $modifier;
-    private readonly string $argumentsForDeclaration;
-    private readonly string $argumentsForCall;
-    private readonly Type $returnType;
-    private readonly string $reference;
-    private readonly bool $callOriginalMethod;
-    private readonly bool $static;
-    private readonly ?string $deprecation;
+    private string $methodName;
+    /**
+     * @readonly
+     */
+    private bool $cloneArguments;
+    /**
+     * @readonly
+     */
+    private string $modifier;
+    /**
+     * @readonly
+     */
+    private string $argumentsForDeclaration;
+    /**
+     * @readonly
+     */
+    private string $argumentsForCall;
+    /**
+     * @readonly
+     */
+    private Type $returnType;
+    /**
+     * @readonly
+     */
+    private string $reference;
+    /**
+     * @readonly
+     */
+    private bool $callOriginalMethod;
+    /**
+     * @readonly
+     */
+    private bool $static;
+    /**
+     * @readonly
+     */
+    private ?string $deprecation;
 
     /**
      * @throws ReflectionException
