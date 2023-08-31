@@ -29,13 +29,13 @@ jobs:
             -   run: rector-local/vendor/bin/rector process bin src vendor --config build/rector-downgrade-php-72.php --ansi
 
             # downgrade /src and /vendor to PHP 8.0
-            -   run: rector-local/vendor/bin/rector process src vendor --config build-downgrade/rector-downgrade-php-80.php --ansi
+            -   run: rector-local/vendor/bin/rector process src vendor --config build/rector-downgrade-php-80.php --ansi
 
             # copy PHP 7.2 composer
-            -   run: cp build-downgrade/composer-php-80.json composer.json
+            -   run: cp build/composer-php-80.json composer.json
 
             # clear the dev files
-            -   run: rm -rf build build-downgrade .github tests tools schema
+            -   run: rm -rf build .github tests tools schema
 
             # setup git user
             -
