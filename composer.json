@@ -51,10 +51,8 @@
     },
     "config": {
         "optimize-autoloader": true,
-        "sort-packages": true
-    },
-    "suggest": {
-        "ext-soap": "To be able to generate mocks based on WSDL files"
+        "sort-packages": true,
+        "platform-check": false
     },
     "bin": [
         "phpunit"
@@ -78,11 +76,6 @@
             "tests/_files/NamespaceCoveredFunction.php",
             "tests/end-to-end/code-coverage/ignore-function-using-attribute/src/CoveredFunction.php"
         ]
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-main": "10.4-dev"
-        }
     },
     "require-dev": {
         "rector/rector": "^0.18.1"
