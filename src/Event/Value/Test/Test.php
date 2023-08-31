@@ -18,8 +18,9 @@ abstract class Test
 {
     /**
      * @psalm-var non-empty-string
+     * @readonly
      */
-    private readonly string $file;
+    private string $file;
 
     /**
      * @psalm-param non-empty-string $file

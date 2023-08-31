@@ -20,17 +20,22 @@ use PHPUnit\Event\Telemetry;
  */
 final class PartialMockObjectCreated implements Event
 {
-    private readonly Telemetry\Info $telemetryInfo;
+    /**
+     * @readonly
+     */
+    private Telemetry\Info $telemetryInfo;
 
     /**
      * @psalm-var class-string
+     * @readonly
      */
-    private readonly string $className;
+    private string $className;
 
     /**
      * @psalm-var list<string>
+     * @readonly
      */
-    private readonly array $methodNames;
+    private array $methodNames;
 
     /**
      * @psalm-param class-string $className

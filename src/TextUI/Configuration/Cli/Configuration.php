@@ -18,105 +18,383 @@ final class Configuration
 {
     /**
      * @psalm-var list<non-empty-string>
+     * @readonly
      */
-    private readonly array $arguments;
-    private readonly ?string $atLeastVersion;
-    private readonly ?bool $backupGlobals;
-    private readonly ?bool $backupStaticProperties;
-    private readonly ?bool $beStrictAboutChangesToGlobalState;
-    private readonly ?string $bootstrap;
-    private readonly ?string $cacheDirectory;
-    private readonly ?bool $cacheResult;
-    private readonly ?string $cacheResultFile;
-    private readonly bool $checkVersion;
-    private readonly ?string $colors;
-    private readonly null|int|string $columns;
-    private readonly ?string $configurationFile;
-    private readonly ?array $coverageFilter;
-    private readonly ?string $coverageClover;
-    private readonly ?string $coverageCobertura;
-    private readonly ?string $coverageCrap4J;
-    private readonly ?string $coverageHtml;
-    private readonly ?string $coveragePhp;
-    private readonly ?string $coverageText;
-    private readonly ?bool $coverageTextShowUncoveredFiles;
-    private readonly ?bool $coverageTextShowOnlySummary;
-    private readonly ?string $coverageXml;
-    private readonly ?bool $pathCoverage;
-    private readonly ?string $coverageCacheDirectory;
-    private readonly bool $warmCoverageCache;
-    private readonly ?int $defaultTimeLimit;
-    private readonly ?bool $disableCodeCoverageIgnore;
-    private readonly ?bool $disallowTestOutput;
-    private readonly ?bool $enforceTimeLimit;
-    private readonly ?array $excludeGroups;
-    private readonly ?int $executionOrder;
-    private readonly ?int $executionOrderDefects;
-    private readonly ?bool $failOnDeprecation;
-    private readonly ?bool $failOnEmptyTestSuite;
-    private readonly ?bool $failOnIncomplete;
-    private readonly ?bool $failOnNotice;
-    private readonly ?bool $failOnRisky;
-    private readonly ?bool $failOnSkipped;
-    private readonly ?bool $failOnWarning;
-    private readonly ?bool $stopOnDefect;
-    private readonly ?bool $stopOnDeprecation;
-    private readonly ?bool $stopOnError;
-    private readonly ?bool $stopOnFailure;
-    private readonly ?bool $stopOnIncomplete;
-    private readonly ?bool $stopOnNotice;
-    private readonly ?bool $stopOnRisky;
-    private readonly ?bool $stopOnSkipped;
-    private readonly ?bool $stopOnWarning;
-    private readonly ?string $filter;
-    private readonly bool $generateConfiguration;
-    private readonly bool $migrateConfiguration;
-    private readonly ?array $groups;
-    private readonly ?array $testsCovering;
-    private readonly ?array $testsUsing;
-    private readonly bool $help;
-    private readonly ?string $includePath;
-    private readonly ?array $iniSettings;
-    private readonly ?string $junitLogfile;
-    private readonly bool $listGroups;
-    private readonly bool $listSuites;
-    private readonly bool $listTests;
-    private readonly ?string $listTestsXml;
-    private readonly ?bool $noCoverage;
-    private readonly ?bool $noExtensions;
-    private readonly ?bool $noOutput;
-    private readonly ?bool $noProgress;
-    private readonly ?bool $noResults;
-    private readonly ?bool $noLogging;
-    private readonly ?bool $processIsolation;
-    private readonly ?int $randomOrderSeed;
-    private readonly ?bool $reportUselessTests;
-    private readonly ?bool $resolveDependencies;
-    private readonly ?bool $reverseList;
-    private readonly ?bool $stderr;
-    private readonly ?bool $strictCoverage;
-    private readonly ?string $teamcityLogfile;
-    private readonly ?bool $teamCityPrinter;
-    private readonly ?string $testdoxHtmlFile;
-    private readonly ?string $testdoxTextFile;
-    private readonly ?bool $testdoxPrinter;
+    private array $arguments;
+    /**
+     * @readonly
+     */
+    private ?string $atLeastVersion;
+    /**
+     * @readonly
+     */
+    private ?bool $backupGlobals;
+    /**
+     * @readonly
+     */
+    private ?bool $backupStaticProperties;
+    /**
+     * @readonly
+     */
+    private ?bool $beStrictAboutChangesToGlobalState;
+    /**
+     * @readonly
+     */
+    private ?string $bootstrap;
+    /**
+     * @readonly
+     */
+    private ?string $cacheDirectory;
+    /**
+     * @readonly
+     */
+    private ?bool $cacheResult;
+    /**
+     * @readonly
+     */
+    private ?string $cacheResultFile;
+    /**
+     * @readonly
+     */
+    private bool $checkVersion;
+    /**
+     * @readonly
+     */
+    private ?string $colors;
+    /**
+     * @readonly
+     */
+    private null|int|string $columns;
+    /**
+     * @readonly
+     */
+    private ?string $configurationFile;
+    /**
+     * @readonly
+     */
+    private ?array $coverageFilter;
+    /**
+     * @readonly
+     */
+    private ?string $coverageClover;
+    /**
+     * @readonly
+     */
+    private ?string $coverageCobertura;
+    /**
+     * @readonly
+     */
+    private ?string $coverageCrap4J;
+    /**
+     * @readonly
+     */
+    private ?string $coverageHtml;
+    /**
+     * @readonly
+     */
+    private ?string $coveragePhp;
+    /**
+     * @readonly
+     */
+    private ?string $coverageText;
+    /**
+     * @readonly
+     */
+    private ?bool $coverageTextShowUncoveredFiles;
+    /**
+     * @readonly
+     */
+    private ?bool $coverageTextShowOnlySummary;
+    /**
+     * @readonly
+     */
+    private ?string $coverageXml;
+    /**
+     * @readonly
+     */
+    private ?bool $pathCoverage;
+    /**
+     * @readonly
+     */
+    private ?string $coverageCacheDirectory;
+    /**
+     * @readonly
+     */
+    private bool $warmCoverageCache;
+    /**
+     * @readonly
+     */
+    private ?int $defaultTimeLimit;
+    /**
+     * @readonly
+     */
+    private ?bool $disableCodeCoverageIgnore;
+    /**
+     * @readonly
+     */
+    private ?bool $disallowTestOutput;
+    /**
+     * @readonly
+     */
+    private ?bool $enforceTimeLimit;
+    /**
+     * @readonly
+     */
+    private ?array $excludeGroups;
+    /**
+     * @readonly
+     */
+    private ?int $executionOrder;
+    /**
+     * @readonly
+     */
+    private ?int $executionOrderDefects;
+    /**
+     * @readonly
+     */
+    private ?bool $failOnDeprecation;
+    /**
+     * @readonly
+     */
+    private ?bool $failOnEmptyTestSuite;
+    /**
+     * @readonly
+     */
+    private ?bool $failOnIncomplete;
+    /**
+     * @readonly
+     */
+    private ?bool $failOnNotice;
+    /**
+     * @readonly
+     */
+    private ?bool $failOnRisky;
+    /**
+     * @readonly
+     */
+    private ?bool $failOnSkipped;
+    /**
+     * @readonly
+     */
+    private ?bool $failOnWarning;
+    /**
+     * @readonly
+     */
+    private ?bool $stopOnDefect;
+    /**
+     * @readonly
+     */
+    private ?bool $stopOnDeprecation;
+    /**
+     * @readonly
+     */
+    private ?bool $stopOnError;
+    /**
+     * @readonly
+     */
+    private ?bool $stopOnFailure;
+    /**
+     * @readonly
+     */
+    private ?bool $stopOnIncomplete;
+    /**
+     * @readonly
+     */
+    private ?bool $stopOnNotice;
+    /**
+     * @readonly
+     */
+    private ?bool $stopOnRisky;
+    /**
+     * @readonly
+     */
+    private ?bool $stopOnSkipped;
+    /**
+     * @readonly
+     */
+    private ?bool $stopOnWarning;
+    /**
+     * @readonly
+     */
+    private ?string $filter;
+    /**
+     * @readonly
+     */
+    private bool $generateConfiguration;
+    /**
+     * @readonly
+     */
+    private bool $migrateConfiguration;
+    /**
+     * @readonly
+     */
+    private ?array $groups;
+    /**
+     * @readonly
+     */
+    private ?array $testsCovering;
+    /**
+     * @readonly
+     */
+    private ?array $testsUsing;
+    /**
+     * @readonly
+     */
+    private bool $help;
+    /**
+     * @readonly
+     */
+    private ?string $includePath;
+    /**
+     * @readonly
+     */
+    private ?array $iniSettings;
+    /**
+     * @readonly
+     */
+    private ?string $junitLogfile;
+    /**
+     * @readonly
+     */
+    private bool $listGroups;
+    /**
+     * @readonly
+     */
+    private bool $listSuites;
+    /**
+     * @readonly
+     */
+    private bool $listTests;
+    /**
+     * @readonly
+     */
+    private ?string $listTestsXml;
+    /**
+     * @readonly
+     */
+    private ?bool $noCoverage;
+    /**
+     * @readonly
+     */
+    private ?bool $noExtensions;
+    /**
+     * @readonly
+     */
+    private ?bool $noOutput;
+    /**
+     * @readonly
+     */
+    private ?bool $noProgress;
+    /**
+     * @readonly
+     */
+    private ?bool $noResults;
+    /**
+     * @readonly
+     */
+    private ?bool $noLogging;
+    /**
+     * @readonly
+     */
+    private ?bool $processIsolation;
+    /**
+     * @readonly
+     */
+    private ?int $randomOrderSeed;
+    /**
+     * @readonly
+     */
+    private ?bool $reportUselessTests;
+    /**
+     * @readonly
+     */
+    private ?bool $resolveDependencies;
+    /**
+     * @readonly
+     */
+    private ?bool $reverseList;
+    /**
+     * @readonly
+     */
+    private ?bool $stderr;
+    /**
+     * @readonly
+     */
+    private ?bool $strictCoverage;
+    /**
+     * @readonly
+     */
+    private ?string $teamcityLogfile;
+    /**
+     * @readonly
+     */
+    private ?bool $teamCityPrinter;
+    /**
+     * @readonly
+     */
+    private ?string $testdoxHtmlFile;
+    /**
+     * @readonly
+     */
+    private ?string $testdoxTextFile;
+    /**
+     * @readonly
+     */
+    private ?bool $testdoxPrinter;
 
     /**
      * @psalm-var ?non-empty-list<string>
+     * @readonly
      */
-    private readonly ?array $testSuffixes;
-    private readonly ?string $testSuite;
-    private readonly ?string $excludeTestSuite;
-    private readonly bool $useDefaultConfiguration;
-    private readonly ?bool $displayDetailsOnIncompleteTests;
-    private readonly ?bool $displayDetailsOnSkippedTests;
-    private readonly ?bool $displayDetailsOnTestsThatTriggerDeprecations;
-    private readonly ?bool $displayDetailsOnTestsThatTriggerErrors;
-    private readonly ?bool $displayDetailsOnTestsThatTriggerNotices;
-    private readonly ?bool $displayDetailsOnTestsThatTriggerWarnings;
-    private readonly bool $version;
-    private readonly ?string $logEventsText;
-    private readonly ?string $logEventsVerboseText;
+    private ?array $testSuffixes;
+    /**
+     * @readonly
+     */
+    private ?string $testSuite;
+    /**
+     * @readonly
+     */
+    private ?string $excludeTestSuite;
+    /**
+     * @readonly
+     */
+    private bool $useDefaultConfiguration;
+    /**
+     * @readonly
+     */
+    private ?bool $displayDetailsOnIncompleteTests;
+    /**
+     * @readonly
+     */
+    private ?bool $displayDetailsOnSkippedTests;
+    /**
+     * @readonly
+     */
+    private ?bool $displayDetailsOnTestsThatTriggerDeprecations;
+    /**
+     * @readonly
+     */
+    private ?bool $displayDetailsOnTestsThatTriggerErrors;
+    /**
+     * @readonly
+     */
+    private ?bool $displayDetailsOnTestsThatTriggerNotices;
+    /**
+     * @readonly
+     */
+    private ?bool $displayDetailsOnTestsThatTriggerWarnings;
+    /**
+     * @readonly
+     */
+    private bool $version;
+    /**
+     * @readonly
+     */
+    private ?string $logEventsText;
+    /**
+     * @readonly
+     */
+    private ?string $logEventsVerboseText;
 
     /**
      * @psalm-param list<non-empty-string> $arguments

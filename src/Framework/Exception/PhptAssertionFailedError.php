@@ -16,10 +16,22 @@ namespace PHPUnit\Framework;
  */
 final class PhptAssertionFailedError extends AssertionFailedError
 {
-    private readonly string $syntheticFile;
-    private readonly int $syntheticLine;
-    private readonly array $syntheticTrace;
-    private readonly string $diff;
+    /**
+     * @readonly
+     */
+    private string $syntheticFile;
+    /**
+     * @readonly
+     */
+    private int $syntheticLine;
+    /**
+     * @readonly
+     */
+    private array $syntheticTrace;
+    /**
+     * @readonly
+     */
+    private string $diff;
 
     public function __construct(string $message, int $code, string $file, int $line, array $trace, string $diff)
     {

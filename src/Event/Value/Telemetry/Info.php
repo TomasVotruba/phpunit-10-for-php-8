@@ -18,11 +18,26 @@ use function sprintf;
  */
 final class Info
 {
-    private readonly Snapshot $current;
-    private readonly Duration $durationSinceStart;
-    private readonly MemoryUsage $memorySinceStart;
-    private readonly Duration $durationSincePrevious;
-    private readonly MemoryUsage $memorySincePrevious;
+    /**
+     * @readonly
+     */
+    private Snapshot $current;
+    /**
+     * @readonly
+     */
+    private Duration $durationSinceStart;
+    /**
+     * @readonly
+     */
+    private MemoryUsage $memorySinceStart;
+    /**
+     * @readonly
+     */
+    private Duration $durationSincePrevious;
+    /**
+     * @readonly
+     */
+    private MemoryUsage $memorySincePrevious;
 
     public function __construct(Snapshot $current, Duration $durationSinceStart, MemoryUsage $memorySinceStart, Duration $durationSincePrevious, MemoryUsage $memorySincePrevious)
     {

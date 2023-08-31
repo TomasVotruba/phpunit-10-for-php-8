@@ -18,7 +18,10 @@ use PHPUnit\TextUI\Configuration\TestSuiteCollection;
  */
 final class ListTestSuitesCommand implements Command
 {
-    private readonly TestSuiteCollection $suites;
+    /**
+     * @readonly
+     */
+    private TestSuiteCollection $suites;
 
     public function __construct(TestSuiteCollection $suites)
     {

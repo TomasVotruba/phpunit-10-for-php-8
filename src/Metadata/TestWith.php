@@ -16,7 +16,10 @@ namespace PHPUnit\Metadata;
  */
 final class TestWith extends Metadata
 {
-    private readonly array $data;
+    /**
+     * @readonly
+     */
+    private array $data;
 
     /**
      * @psalm-param 0|1 $level

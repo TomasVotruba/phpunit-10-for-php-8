@@ -23,8 +23,9 @@ abstract class Metadata
 
     /**
      * @psalm-var 0|1
+     * @readonly
      */
-    private readonly int $level;
+    private int $level;
 
     public static function after(): After
     {

@@ -21,9 +21,18 @@ use PHPUnit\Event\Telemetry\Info;
  */
 final class DataProviderMethodCalled implements Event
 {
-    private readonly Info $telemetryInfo;
-    private readonly ClassMethod $testMethod;
-    private readonly ClassMethod $dataProviderMethod;
+    /**
+     * @readonly
+     */
+    private Info $telemetryInfo;
+    /**
+     * @readonly
+     */
+    private ClassMethod $testMethod;
+    /**
+     * @readonly
+     */
+    private ClassMethod $dataProviderMethod;
 
     public function __construct(Info $telemetryInfo, ClassMethod $testMethod, ClassMethod $dataProviderMethod)
     {

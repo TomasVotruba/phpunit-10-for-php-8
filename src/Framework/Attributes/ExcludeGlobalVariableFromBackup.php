@@ -21,8 +21,9 @@ final class ExcludeGlobalVariableFromBackup
 {
     /**
      * @psalm-var non-empty-string
+     * @readonly
      */
-    private readonly string $globalVariableName;
+    private string $globalVariableName;
 
     /**
      * @psalm-param non-empty-string $globalVariableName

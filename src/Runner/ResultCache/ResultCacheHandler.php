@@ -30,7 +30,10 @@ use PHPUnit\Framework\TestStatus\TestStatus;
  */
 final class ResultCacheHandler
 {
-    private readonly ResultCache $cache;
+    /**
+     * @readonly
+     */
+    private ResultCache $cache;
     private ?HRTime $time  = null;
     private int $testSuite = 0;
 

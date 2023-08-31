@@ -22,8 +22,9 @@ final class TestResultCollection implements IteratorAggregate
 {
     /**
      * @psalm-var list<TestResult>
+     * @readonly
      */
-    private readonly array $testResults;
+    private array $testResults;
 
     /**
      * @psalm-param list<TestResult> $testResults
