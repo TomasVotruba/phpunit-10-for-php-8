@@ -18,8 +18,14 @@ use PHPUnit\TextUI\Configuration\File;
  */
 final class Crap4j
 {
-    private readonly File $target;
-    private readonly int $threshold;
+    /**
+     * @readonly
+     */
+    private File $target;
+    /**
+     * @readonly
+     */
+    private int $threshold;
 
     public function __construct(File $target, int $threshold)
     {

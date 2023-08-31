@@ -18,11 +18,21 @@ final class TestSuite
 {
     /**
      * @psalm-var non-empty-string
+     * @readonly
      */
-    private readonly string $name;
-    private readonly TestDirectoryCollection $directories;
-    private readonly TestFileCollection $files;
-    private readonly FileCollection $exclude;
+    private string $name;
+    /**
+     * @readonly
+     */
+    private TestDirectoryCollection $directories;
+    /**
+     * @readonly
+     */
+    private TestFileCollection $files;
+    /**
+     * @readonly
+     */
+    private FileCollection $exclude;
 
     /**
      * @psalm-param non-empty-string $name

@@ -23,8 +23,9 @@ final class DirectoryCollectionIterator implements Countable, Iterator
 {
     /**
      * @psalm-var list<Directory>
+     * @readonly
      */
-    private readonly array $directories;
+    private array $directories;
     private int $position = 0;
 
     public function __construct(DirectoryCollection $directories)

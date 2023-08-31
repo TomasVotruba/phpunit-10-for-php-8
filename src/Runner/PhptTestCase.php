@@ -72,9 +72,13 @@ final class PhptTestCase implements Reorderable, SelfDescribing, Test
 {
     /**
      * @psalm-var non-empty-string
+     * @readonly
      */
-    private readonly string $filename;
-    private readonly AbstractPhpProcess $phpUtil;
+    private string $filename;
+    /**
+     * @readonly
+     */
+    private AbstractPhpProcess $phpUtil;
     private string $output = '';
 
     /**

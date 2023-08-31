@@ -24,8 +24,9 @@ final class TestSuiteIterator implements RecursiveIterator
 
     /**
      * @psalm-var list<Test>
+     * @readonly
      */
-    private readonly array $tests;
+    private array $tests;
 
     public function __construct(TestSuite $testSuite)
     {

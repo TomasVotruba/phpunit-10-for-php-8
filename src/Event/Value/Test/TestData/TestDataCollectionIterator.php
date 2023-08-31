@@ -21,8 +21,9 @@ final class TestDataCollectionIterator implements Iterator
 {
     /**
      * @psalm-var list<TestData>
+     * @readonly
      */
-    private readonly array $data;
+    private array $data;
     private int $position = 0;
 
     public function __construct(TestDataCollection $data)

@@ -29,22 +29,70 @@ use PHPUnit\TextUI\XmlConfiguration\Exception;
  */
 final class CodeCoverage
 {
-    private readonly ?Directory $cacheDirectory;
-    private readonly FilterDirectoryCollection $directories;
-    private readonly FileCollection $files;
-    private readonly FilterDirectoryCollection $excludeDirectories;
-    private readonly FileCollection $excludeFiles;
-    private readonly bool $pathCoverage;
-    private readonly bool $includeUncoveredFiles;
-    private readonly bool $ignoreDeprecatedCodeUnits;
-    private readonly bool $disableCodeCoverageIgnore;
-    private readonly ?Clover $clover;
-    private readonly ?Cobertura $cobertura;
-    private readonly ?Crap4j $crap4j;
-    private readonly ?Html $html;
-    private readonly ?Php $php;
-    private readonly ?Text $text;
-    private readonly ?Xml $xml;
+    /**
+     * @readonly
+     */
+    private ?Directory $cacheDirectory;
+    /**
+     * @readonly
+     */
+    private FilterDirectoryCollection $directories;
+    /**
+     * @readonly
+     */
+    private FileCollection $files;
+    /**
+     * @readonly
+     */
+    private FilterDirectoryCollection $excludeDirectories;
+    /**
+     * @readonly
+     */
+    private FileCollection $excludeFiles;
+    /**
+     * @readonly
+     */
+    private bool $pathCoverage;
+    /**
+     * @readonly
+     */
+    private bool $includeUncoveredFiles;
+    /**
+     * @readonly
+     */
+    private bool $ignoreDeprecatedCodeUnits;
+    /**
+     * @readonly
+     */
+    private bool $disableCodeCoverageIgnore;
+    /**
+     * @readonly
+     */
+    private ?Clover $clover;
+    /**
+     * @readonly
+     */
+    private ?Cobertura $cobertura;
+    /**
+     * @readonly
+     */
+    private ?Crap4j $crap4j;
+    /**
+     * @readonly
+     */
+    private ?Html $html;
+    /**
+     * @readonly
+     */
+    private ?Php $php;
+    /**
+     * @readonly
+     */
+    private ?Text $text;
+    /**
+     * @readonly
+     */
+    private ?Xml $xml;
 
     public function __construct(?Directory $cacheDirectory, FilterDirectoryCollection $directories, FileCollection $files, FilterDirectoryCollection $excludeDirectories, FileCollection $excludeFiles, bool $pathCoverage, bool $includeUncoveredFiles, bool $ignoreDeprecatedCodeUnits, bool $disableCodeCoverageIgnore, ?Clover $clover, ?Cobertura $cobertura, ?Crap4j $crap4j, ?Html $html, ?Php $php, ?Text $text, ?Xml $xml)
     {

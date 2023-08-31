@@ -18,8 +18,9 @@ final class ExcludeGlobalVariableFromBackup extends Metadata
 {
     /**
      * @psalm-var non-empty-string
+     * @readonly
      */
-    private readonly string $globalVariableName;
+    private string $globalVariableName;
 
     /**
      * @psalm-param 0|1 $level

@@ -21,12 +21,16 @@ use PHPUnit\Event\Telemetry;
  */
 final class MockObjectForIntersectionOfInterfacesCreated implements Event
 {
-    private readonly Telemetry\Info $telemetryInfo;
+    /**
+     * @readonly
+     */
+    private Telemetry\Info $telemetryInfo;
 
     /**
      * @psalm-var list<class-string>
+     * @readonly
      */
-    private readonly array $interfaces;
+    private array $interfaces;
 
     /**
      * @psalm-param list<class-string> $interfaces

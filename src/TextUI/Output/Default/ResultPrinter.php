@@ -48,20 +48,62 @@ use PHPUnit\TextUI\Output\Printer;
  */
 final class ResultPrinter
 {
-    private readonly Printer $printer;
-    private readonly bool $displayPhpunitErrors;
-    private readonly bool $displayPhpunitWarnings;
-    private readonly bool $displayTestsWithErrors;
-    private readonly bool $displayTestsWithFailedAssertions;
-    private readonly bool $displayRiskyTests;
-    private readonly bool $displayPhpunitDeprecations;
-    private readonly bool $displayDetailsOnIncompleteTests;
-    private readonly bool $displayDetailsOnSkippedTests;
-    private readonly bool $displayDetailsOnTestsThatTriggerDeprecations;
-    private readonly bool $displayDetailsOnTestsThatTriggerErrors;
-    private readonly bool $displayDetailsOnTestsThatTriggerNotices;
-    private readonly bool $displayDetailsOnTestsThatTriggerWarnings;
-    private readonly bool $displayDefectsInReverseOrder;
+    /**
+     * @readonly
+     */
+    private Printer $printer;
+    /**
+     * @readonly
+     */
+    private bool $displayPhpunitErrors;
+    /**
+     * @readonly
+     */
+    private bool $displayPhpunitWarnings;
+    /**
+     * @readonly
+     */
+    private bool $displayTestsWithErrors;
+    /**
+     * @readonly
+     */
+    private bool $displayTestsWithFailedAssertions;
+    /**
+     * @readonly
+     */
+    private bool $displayRiskyTests;
+    /**
+     * @readonly
+     */
+    private bool $displayPhpunitDeprecations;
+    /**
+     * @readonly
+     */
+    private bool $displayDetailsOnIncompleteTests;
+    /**
+     * @readonly
+     */
+    private bool $displayDetailsOnSkippedTests;
+    /**
+     * @readonly
+     */
+    private bool $displayDetailsOnTestsThatTriggerDeprecations;
+    /**
+     * @readonly
+     */
+    private bool $displayDetailsOnTestsThatTriggerErrors;
+    /**
+     * @readonly
+     */
+    private bool $displayDetailsOnTestsThatTriggerNotices;
+    /**
+     * @readonly
+     */
+    private bool $displayDetailsOnTestsThatTriggerWarnings;
+    /**
+     * @readonly
+     */
+    private bool $displayDefectsInReverseOrder;
     private bool $listPrinted = false;
 
     public function __construct(Printer $printer, bool $displayPhpunitErrors, bool $displayPhpunitWarnings, bool $displayPhpunitDeprecations, bool $displayTestsWithErrors, bool $displayTestsWithFailedAssertions, bool $displayRiskyTests, bool $displayDetailsOnIncompleteTests, bool $displayDetailsOnSkippedTests, bool $displayDetailsOnTestsThatTriggerDeprecations, bool $displayDetailsOnTestsThatTriggerErrors, bool $displayDetailsOnTestsThatTriggerNotices, bool $displayDetailsOnTestsThatTriggerWarnings, bool $displayDefectsInReverseOrder)

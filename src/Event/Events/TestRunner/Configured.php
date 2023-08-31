@@ -18,8 +18,14 @@ use PHPUnit\TextUI\Configuration\Configuration;
  */
 final class Configured implements Event
 {
-    private readonly Telemetry\Info $telemetryInfo;
-    private readonly Configuration $configuration;
+    /**
+     * @readonly
+     */
+    private Telemetry\Info $telemetryInfo;
+    /**
+     * @readonly
+     */
+    private Configuration $configuration;
 
     public function __construct(Telemetry\Info $telemetryInfo, Configuration $configuration)
     {

@@ -21,15 +21,28 @@ use PHPUnit\Framework\TestStatus\TestStatus;
  */
 final class TestResult
 {
-    private readonly TestMethod $test;
-    private readonly Duration $duration;
-    private readonly TestStatus $status;
-    private readonly ?Throwable $throwable;
+    /**
+     * @readonly
+     */
+    private TestMethod $test;
+    /**
+     * @readonly
+     */
+    private Duration $duration;
+    /**
+     * @readonly
+     */
+    private TestStatus $status;
+    /**
+     * @readonly
+     */
+    private ?Throwable $throwable;
 
     /**
      * @psalm-var list<class-string|trait-string>
+     * @readonly
      */
-    private readonly array $testDoubles;
+    private array $testDoubles;
 
     /**
      * @psalm-param  list<class-string|trait-string> $testDoubles

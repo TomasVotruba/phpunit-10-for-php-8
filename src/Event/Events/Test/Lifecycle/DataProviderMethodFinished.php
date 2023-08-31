@@ -23,13 +23,20 @@ use PHPUnit\Event\Telemetry;
  */
 final class DataProviderMethodFinished implements Event
 {
-    private readonly Telemetry\Info $telemetryInfo;
-    private readonly ClassMethod $testMethod;
+    /**
+     * @readonly
+     */
+    private Telemetry\Info $telemetryInfo;
+    /**
+     * @readonly
+     */
+    private ClassMethod $testMethod;
 
     /**
      * @psalm-var list<ClassMethod>
+     * @readonly
      */
-    private readonly array $calledMethods;
+    private array $calledMethods;
 
     public function __construct(Telemetry\Info $telemetryInfo, ClassMethod $testMethod, ClassMethod ...$calledMethods)
     {

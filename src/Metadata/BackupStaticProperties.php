@@ -16,7 +16,10 @@ namespace PHPUnit\Metadata;
  */
 final class BackupStaticProperties extends Metadata
 {
-    private readonly bool $enabled;
+    /**
+     * @readonly
+     */
+    private bool $enabled;
 
     /**
      * @psalm-param 0|1 $level

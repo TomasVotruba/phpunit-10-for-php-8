@@ -52,7 +52,10 @@ use PHPUnit\TextUI\Configuration\SourceFilter;
  */
 final class Collector
 {
-    private readonly Source $source;
+    /**
+     * @readonly
+     */
+    private Source $source;
     private int $numberOfTests                       = 0;
     private int $numberOfTestsRun                    = 0;
     private int $numberOfAssertions                  = 0;

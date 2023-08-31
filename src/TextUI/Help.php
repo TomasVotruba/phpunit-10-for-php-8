@@ -159,7 +159,10 @@ final class Help
 
     ];
     private int $lengthOfLongestOptionName = 0;
-    private readonly int $columnsAvailableForDescription;
+    /**
+     * @readonly
+     */
+    private int $columnsAvailableForDescription;
     private ?bool $hasColor;
 
     public function __construct(?int $width = null, ?bool $withColor = null)

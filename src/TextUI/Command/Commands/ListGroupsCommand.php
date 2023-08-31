@@ -20,7 +20,10 @@ use PHPUnit\TextUI\Configuration\Registry;
  */
 final class ListGroupsCommand implements Command
 {
-    private readonly TestSuite $suite;
+    /**
+     * @readonly
+     */
+    private TestSuite $suite;
 
     public function __construct(TestSuite $suite)
     {

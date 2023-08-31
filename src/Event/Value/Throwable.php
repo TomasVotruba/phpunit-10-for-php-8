@@ -21,12 +21,25 @@ final class Throwable
 {
     /**
      * @psalm-var class-string
+     * @readonly
      */
-    private readonly string $className;
-    private readonly string $message;
-    private readonly string $description;
-    private readonly string $stackTrace;
-    private readonly ?Throwable $previous;
+    private string $className;
+    /**
+     * @readonly
+     */
+    private string $message;
+    /**
+     * @readonly
+     */
+    private string $description;
+    /**
+     * @readonly
+     */
+    private string $stackTrace;
+    /**
+     * @readonly
+     */
+    private ?Throwable $previous;
 
     /**
      * @psalm-param class-string $className

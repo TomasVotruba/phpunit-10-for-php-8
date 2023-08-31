@@ -23,8 +23,9 @@ final class IniSettingCollectionIterator implements Countable, Iterator
 {
     /**
      * @psalm-var list<IniSetting>
+     * @readonly
      */
-    private readonly array $iniSettings;
+    private array $iniSettings;
     private int $position = 0;
 
     public function __construct(IniSettingCollection $iniSettings)

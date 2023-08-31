@@ -26,8 +26,9 @@ final class TestIdFilterIterator extends RecursiveFilterIterator
 {
     /**
      * @psalm-var non-empty-list<non-empty-string>
+     * @readonly
      */
-    private readonly array $testIds;
+    private array $testIds;
 
     /**
      * @psalm-param RecursiveIterator<int, Test> $iterator

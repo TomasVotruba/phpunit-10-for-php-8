@@ -18,7 +18,10 @@ use PHPUnit\Metadata\Version\Requirement;
  */
 final class RequiresPhpunit extends Metadata
 {
-    private readonly Requirement $versionRequirement;
+    /**
+     * @readonly
+     */
+    private Requirement $versionRequirement;
 
     /**
      * @psalm-param 0|1 $level
