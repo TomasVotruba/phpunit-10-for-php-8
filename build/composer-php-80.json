@@ -8,5 +8,13 @@
     },
     "bin": [
         "phpunit"
-    ]
+    ],
+    "autoload": {
+        "classmap": [
+            "src/"
+        ],
+        "files": [
+            "src/Framework/Assert/Functions.php"
+        ]
+    }
 }
