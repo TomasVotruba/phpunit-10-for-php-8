@@ -18,11 +18,18 @@ jobs:
                     php-version: 8.1
                     coverage: none
 
-            -   uses: "ramsey/composer-install@v2"
+            # but no dev packages
+            -   run: composer update --no-dev --ansi
+
+            # get rector to "rector-local" directory, to avoid downgrading itself in the /vendor
+            -   run: mkdir rector-local
+            -   run: composer require rector/rector --working-dir rector-local --ansi
+
+            # downgrade to PHP 7.2
+            -   run: rector-local/vendor/bin/rector process bin src vendor --config build/rector-downgrade-php-72.php --ansi
 
             # downgrade /src and /vendor to PHP 8.0
-            -   run: vendor/bin/rector process src vendor --config build-downgrade/rector-downgrade-php-80.php --ansi
-            -   run: vendor/bin/ecs check src --fix --ansi
+            -   run: rector-local/vendor/bin/rector process src vendor --config build-downgrade/rector-downgrade-php-80.php --ansi
 
             # copy PHP 7.2 composer
             -   run: cp build-downgrade/composer-php-80.json composer.json
