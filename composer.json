@@ -22,7 +22,7 @@
     },
     "prefer-stable": true,
     "require": {
-        "php": ">=8.1",
+        "php": "^8.0",
         "ext-dom": "*",
         "ext-json": "*",
         "ext-libxml": "*",
@@ -50,9 +50,6 @@
         "sebastian/version": "^4.0"
     },
     "config": {
-        "platform": {
-            "php": "8.1.0"
-        },
         "optimize-autoloader": true,
         "sort-packages": true
     },
@@ -86,5 +83,8 @@
         "branch-alias": {
             "dev-main": "10.4-dev"
         }
+    },
+    "require-dev": {
+        "rector/rector": "^0.18.1"
     }
 }
