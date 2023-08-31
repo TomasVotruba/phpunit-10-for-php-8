@@ -16,4 +16,4 @@ jobs:
 
             -   run: composer require tomasvotruba/phpunit-10-for-php-8 --dev
 
-            -   run: vendor/bin/phpunit --help --ansi
+            -   run: vendor/bin/phpunit --help --colors
