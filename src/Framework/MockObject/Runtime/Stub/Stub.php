@@ -20,5 +20,5 @@ interface Stub
      * Fakes the processing of the invocation $invocation by returning a
      * specific value.
      */
-    public function invoke(Invocation $invocation): mixed;
+    public function invoke(Invocation $invocation);
 }
