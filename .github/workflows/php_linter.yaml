@@ -18,4 +18,4 @@ jobs:
 
             -   run: composer require php-parallel-lint/php-parallel-lint --dev
 
-            -   run: vendor/bin/parallel-lint tomasvotruba/phpunit-10-for-php-8
+            -   run: vendor/bin/parallel-lint vendor/tomasvotruba/phpunit-10-for-php-8
