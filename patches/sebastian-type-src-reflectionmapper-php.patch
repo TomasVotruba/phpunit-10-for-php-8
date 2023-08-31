@@ -1,0 +1,11 @@
+--- /dev/null
++++ ../src/ReflectionMapper.php
+@@ -162,7 +162,7 @@
+             return true;
+         }
+ 
+-        return $functionOrMethod->hasTentativeReturnType();
++        return false;
+     }
+ 
+     private function returnType(ReflectionFunction|ReflectionMethod $functionOrMethod): ?ReflectionType

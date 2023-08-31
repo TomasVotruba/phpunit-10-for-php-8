@@ -20,6 +20,9 @@ jobs:
                     php-version: 8.1
                     coverage: none
 
+            # invoke patches
+            -   run: composer install --ansi
+
             # but no dev packages
             -   run: composer update --no-dev --ansi
 
