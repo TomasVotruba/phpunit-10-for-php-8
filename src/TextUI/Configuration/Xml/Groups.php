@@ -18,8 +18,14 @@ use PHPUnit\TextUI\Configuration\GroupCollection;
  */
 final class Groups
 {
-    private readonly GroupCollection $include;
-    private readonly GroupCollection $exclude;
+    /**
+     * @readonly
+     */
+    private GroupCollection $include;
+    /**
+     * @readonly
+     */
+    private GroupCollection $exclude;
 
     public function __construct(GroupCollection $include, GroupCollection $exclude)
     {

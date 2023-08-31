@@ -22,8 +22,9 @@ final class ExtensionBootstrapCollection implements IteratorAggregate
 {
     /**
      * @psalm-var list<ExtensionBootstrap>
+     * @readonly
      */
-    private readonly array $extensionBootstraps;
+    private array $extensionBootstraps;
 
     /**
      * @psalm-param list<ExtensionBootstrap> $extensionBootstraps

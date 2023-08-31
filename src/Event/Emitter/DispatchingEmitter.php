@@ -30,9 +30,18 @@ use SebastianBergmann\Exporter\Exporter;
  */
 final class DispatchingEmitter implements Emitter
 {
-    private readonly Dispatcher $dispatcher;
-    private readonly Telemetry\System $system;
-    private readonly Telemetry\Snapshot $startSnapshot;
+    /**
+     * @readonly
+     */
+    private Dispatcher $dispatcher;
+    /**
+     * @readonly
+     */
+    private Telemetry\System $system;
+    /**
+     * @readonly
+     */
+    private Telemetry\Snapshot $startSnapshot;
     private Telemetry\Snapshot $previousSnapshot;
 
     public function __construct(Dispatcher $dispatcher, Telemetry\System $system)

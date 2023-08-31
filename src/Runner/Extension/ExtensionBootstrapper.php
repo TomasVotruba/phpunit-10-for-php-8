@@ -25,8 +25,14 @@ use Throwable;
  */
 final class ExtensionBootstrapper
 {
-    private readonly Configuration $configuration;
-    private readonly Facade $facade;
+    /**
+     * @readonly
+     */
+    private Configuration $configuration;
+    /**
+     * @readonly
+     */
+    private Facade $facade;
 
     public function __construct(Configuration $configuration, Facade $facade)
     {

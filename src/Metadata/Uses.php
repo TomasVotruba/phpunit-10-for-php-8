@@ -18,8 +18,9 @@ final class Uses extends Metadata
 {
     /**
      * @psalm-var non-empty-string
+     * @readonly
      */
-    private readonly string $target;
+    private string $target;
 
     /**
      * @psalm-param 0|1 $level

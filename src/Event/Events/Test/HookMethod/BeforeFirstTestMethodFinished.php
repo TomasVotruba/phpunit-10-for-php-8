@@ -22,17 +22,22 @@ use PHPUnit\Event\Telemetry;
  */
 final class BeforeFirstTestMethodFinished implements Event
 {
-    private readonly Telemetry\Info$telemetryInfo;
+    /**
+     * @readonly
+     */
+    private Telemetry\Info$telemetryInfo;
 
     /**
      * @psalm-var class-string
+     * @readonly
      */
-    private readonly string $testClassName;
+    private string $testClassName;
 
     /**
      * @psalm-var list<Code\ClassMethod>
+     * @readonly
      */
-    private readonly array $calledMethods;
+    private array $calledMethods;
 
     /**
      * @psalm-param class-string $testClassName

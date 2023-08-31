@@ -22,24 +22,36 @@ use PHPUnit\Event\Telemetry;
  */
 final class DeprecationTriggered implements Event
 {
-    private readonly Telemetry\Info $telemetryInfo;
-    private readonly Test $test;
+    /**
+     * @readonly
+     */
+    private Telemetry\Info $telemetryInfo;
+    /**
+     * @readonly
+     */
+    private Test $test;
 
     /**
      * @psalm-var non-empty-string
+     * @readonly
      */
-    private readonly string $message;
+    private string $message;
 
     /**
      * @psalm-var non-empty-string
+     * @readonly
      */
-    private readonly string $file;
+    private string $file;
 
     /**
      * @psalm-var positive-int
+     * @readonly
      */
-    private readonly int $line;
-    private readonly bool $suppressed;
+    private int $line;
+    /**
+     * @readonly
+     */
+    private bool $suppressed;
 
     /**
      * @psalm-param non-empty-string $message

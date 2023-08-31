@@ -27,18 +27,40 @@ use function sort;
  */
 final class PHP
 {
-    private readonly string $version;
-    private readonly int $versionId;
-    private readonly int $majorVersion;
-    private readonly int $minorVersion;
-    private readonly int $releaseVersion;
-    private readonly string $extraVersion;
-    private readonly string $sapi;
+    /**
+     * @readonly
+     */
+    private string $version;
+    /**
+     * @readonly
+     */
+    private int $versionId;
+    /**
+     * @readonly
+     */
+    private int $majorVersion;
+    /**
+     * @readonly
+     */
+    private int $minorVersion;
+    /**
+     * @readonly
+     */
+    private int $releaseVersion;
+    /**
+     * @readonly
+     */
+    private string $extraVersion;
+    /**
+     * @readonly
+     */
+    private string $sapi;
 
     /**
      * @psalm-var list<string>
+     * @readonly
      */
-    private readonly array $extensions;
+    private array $extensions;
 
     public function __construct()
     {

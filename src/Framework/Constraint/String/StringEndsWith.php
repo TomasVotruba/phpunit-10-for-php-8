@@ -17,7 +17,10 @@ use PHPUnit\Framework\EmptyStringException;
  */
 final class StringEndsWith extends Constraint
 {
-    private readonly string $suffix;
+    /**
+     * @readonly
+     */
+    private string $suffix;
 
     /**
      * @throws EmptyStringException

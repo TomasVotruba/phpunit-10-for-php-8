@@ -16,7 +16,10 @@ namespace PHPUnit\Event\TestData;
  */
 abstract class TestData
 {
-    private readonly string $data;
+    /**
+     * @readonly
+     */
+    private string $data;
 
     protected function __construct(string $data)
     {

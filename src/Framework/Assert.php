@@ -2278,8 +2278,9 @@ abstract class Assert
      * Fails a test with the given message.
      *
      * @throws AssertionFailedError
+     * @return never
      */
-    final public static function fail(string $message = ''): never
+    final public static function fail(string $message = '')
     {
         self::$count++;
 
@@ -2290,8 +2291,9 @@ abstract class Assert
      * Mark the test as incomplete.
      *
      * @throws IncompleteTestError
+     * @return never
      */
-    final public static function markTestIncomplete(string $message = ''): never
+    final public static function markTestIncomplete(string $message = '')
     {
         throw new IncompleteTestError($message);
     }
@@ -2300,8 +2302,9 @@ abstract class Assert
      * Mark the test as skipped.
      *
      * @throws SkippedWithMessageException
+     * @return never
      */
-    final public static function markTestSkipped(string $message = ''): never
+    final public static function markTestSkipped(string $message = '')
     {
         throw new SkippedWithMessageException($message);
     }

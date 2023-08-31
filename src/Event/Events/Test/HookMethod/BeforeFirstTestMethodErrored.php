@@ -22,14 +22,24 @@ use PHPUnit\Event\Telemetry;
  */
 final class BeforeFirstTestMethodErrored implements Event
 {
-    private readonly Telemetry\Info $telemetryInfo;
+    /**
+     * @readonly
+     */
+    private Telemetry\Info $telemetryInfo;
 
     /**
      * @psalm-var class-string
+     * @readonly
      */
-    private readonly string $testClassName;
-    private readonly Code\ClassMethod $calledMethod;
-    private readonly Throwable $throwable;
+    private string $testClassName;
+    /**
+     * @readonly
+     */
+    private Code\ClassMethod $calledMethod;
+    /**
+     * @readonly
+     */
+    private Throwable $throwable;
 
     /**
      * @psalm-param class-string $testClassName

@@ -17,7 +17,10 @@ use function str_contains;
  */
 final class ExceptionMessageIsOrContains extends Constraint
 {
-    private readonly string $expectedMessage;
+    /**
+     * @readonly
+     */
+    private string $expectedMessage;
 
     public function __construct(string $expectedMessage)
     {

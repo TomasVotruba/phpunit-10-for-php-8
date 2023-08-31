@@ -20,7 +20,10 @@ use PharIo\Version\VersionConstraint;
  */
 final class ConstraintRequirement extends Requirement
 {
-    private readonly VersionConstraint $constraint;
+    /**
+     * @readonly
+     */
+    private VersionConstraint $constraint;
 
     public function __construct(VersionConstraint $constraint)
     {

@@ -39,7 +39,10 @@ final class DefaultResultCache implements ResultCache
      * @var string
      */
     private const DEFAULT_RESULT_CACHE_FILENAME = '.phpunit.result.cache';
-    private readonly string $cacheFilename;
+    /**
+     * @readonly
+     */
+    private string $cacheFilename;
 
     /**
      * @psalm-var array<string, TestStatus>

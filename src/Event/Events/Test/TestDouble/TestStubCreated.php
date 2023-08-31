@@ -20,12 +20,16 @@ use PHPUnit\Event\Telemetry;
  */
 final class TestStubCreated implements Event
 {
-    private readonly Telemetry\Info $telemetryInfo;
+    /**
+     * @readonly
+     */
+    private Telemetry\Info $telemetryInfo;
 
     /**
      * @var class-string
+     * @readonly
      */
-    private readonly string $className;
+    private string $className;
 
     /**
      * @psalm-param class-string $className
