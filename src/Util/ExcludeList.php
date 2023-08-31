@@ -138,7 +138,10 @@ final class ExcludeList
      */
     private static array $directories = [];
     private static bool $initialized  = false;
-    private readonly bool $enabled;
+    /**
+     * @readonly
+     */
+    private bool $enabled;
 
     /**
      * @psalm-param non-empty-string $directory

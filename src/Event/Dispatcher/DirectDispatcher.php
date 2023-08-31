@@ -20,7 +20,10 @@ use Throwable;
  */
 final class DirectDispatcher implements SubscribableDispatcher
 {
-    private readonly TypeMap $typeMap;
+    /**
+     * @readonly
+     */
+    private TypeMap $typeMap;
 
     /**
      * @psalm-var array<class-string, list<Subscriber>>

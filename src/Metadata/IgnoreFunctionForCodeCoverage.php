@@ -18,8 +18,9 @@ final class IgnoreFunctionForCodeCoverage extends Metadata
 {
     /**
      * @psalm-var non-empty-string
+     * @readonly
      */
-    private readonly string $functionName;
+    private string $functionName;
 
     /**
      * @psalm-param 0|1 $level

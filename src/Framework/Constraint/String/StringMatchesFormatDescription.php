@@ -24,7 +24,10 @@ use SebastianBergmann\Diff\Output\UnifiedDiffOutputBuilder;
  */
 final class StringMatchesFormatDescription extends Constraint
 {
-    private readonly string $formatDescription;
+    /**
+     * @readonly
+     */
+    private string $formatDescription;
 
     public function __construct(string $formatDescription)
     {

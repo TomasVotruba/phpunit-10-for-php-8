@@ -32,8 +32,14 @@ use PHPUnit\Util\Color;
  */
 final class ResultPrinter
 {
-    private readonly Printer $printer;
-    private readonly bool $colors;
+    /**
+     * @readonly
+     */
+    private Printer $printer;
+    /**
+     * @readonly
+     */
+    private bool $colors;
 
     public function __construct(Printer $printer, bool $colors)
     {

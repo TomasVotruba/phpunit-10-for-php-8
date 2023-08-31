@@ -17,7 +17,10 @@ use PHPUnit\Runner\Version;
  */
 final class AtLeastVersionCommand implements Command
 {
-    private readonly string $version;
+    /**
+     * @readonly
+     */
+    private string $version;
 
     public function __construct(string $version)
     {

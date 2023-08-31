@@ -14,7 +14,10 @@ namespace PHPUnit\Runner\GarbageCollection;
  */
 abstract class Subscriber
 {
-    private readonly GarbageCollectionHandler $handler;
+    /**
+     * @readonly
+     */
+    private GarbageCollectionHandler $handler;
 
     public function __construct(GarbageCollectionHandler $handler)
     {

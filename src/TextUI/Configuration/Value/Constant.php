@@ -16,8 +16,14 @@ namespace PHPUnit\TextUI\Configuration;
  */
 final class Constant
 {
-    private readonly string $name;
-    private readonly bool|string $value;
+    /**
+     * @readonly
+     */
+    private string $name;
+    /**
+     * @readonly
+     */
+    private bool|string $value;
 
     public function __construct(string $name, bool|string $value)
     {

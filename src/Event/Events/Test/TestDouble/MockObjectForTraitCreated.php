@@ -20,12 +20,16 @@ use PHPUnit\Event\Telemetry;
  */
 final class MockObjectForTraitCreated implements Event
 {
-    private readonly Telemetry\Info $telemetryInfo;
+    /**
+     * @readonly
+     */
+    private Telemetry\Info $telemetryInfo;
 
     /**
      * @psalm-var trait-string
+     * @readonly
      */
-    private readonly string $traitName;
+    private string $traitName;
 
     /**
      * @psalm-param trait-string $traitName

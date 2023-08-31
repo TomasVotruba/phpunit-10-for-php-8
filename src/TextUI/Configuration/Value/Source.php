@@ -16,20 +16,62 @@ namespace PHPUnit\TextUI\Configuration;
  */
 final class Source
 {
-    private readonly FilterDirectoryCollection $includeDirectories;
-    private readonly FileCollection $includeFiles;
-    private readonly FilterDirectoryCollection $excludeDirectories;
-    private readonly FileCollection $excludeFiles;
-    private readonly bool $restrictDeprecations;
-    private readonly bool $restrictNotices;
-    private readonly bool $restrictWarnings;
-    private readonly bool $ignoreSuppressionOfDeprecations;
-    private readonly bool $ignoreSuppressionOfPhpDeprecations;
-    private readonly bool $ignoreSuppressionOfErrors;
-    private readonly bool $ignoreSuppressionOfNotices;
-    private readonly bool $ignoreSuppressionOfPhpNotices;
-    private readonly bool $ignoreSuppressionOfWarnings;
-    private readonly bool $ignoreSuppressionOfPhpWarnings;
+    /**
+     * @readonly
+     */
+    private FilterDirectoryCollection $includeDirectories;
+    /**
+     * @readonly
+     */
+    private FileCollection $includeFiles;
+    /**
+     * @readonly
+     */
+    private FilterDirectoryCollection $excludeDirectories;
+    /**
+     * @readonly
+     */
+    private FileCollection $excludeFiles;
+    /**
+     * @readonly
+     */
+    private bool $restrictDeprecations;
+    /**
+     * @readonly
+     */
+    private bool $restrictNotices;
+    /**
+     * @readonly
+     */
+    private bool $restrictWarnings;
+    /**
+     * @readonly
+     */
+    private bool $ignoreSuppressionOfDeprecations;
+    /**
+     * @readonly
+     */
+    private bool $ignoreSuppressionOfPhpDeprecations;
+    /**
+     * @readonly
+     */
+    private bool $ignoreSuppressionOfErrors;
+    /**
+     * @readonly
+     */
+    private bool $ignoreSuppressionOfNotices;
+    /**
+     * @readonly
+     */
+    private bool $ignoreSuppressionOfPhpNotices;
+    /**
+     * @readonly
+     */
+    private bool $ignoreSuppressionOfWarnings;
+    /**
+     * @readonly
+     */
+    private bool $ignoreSuppressionOfPhpWarnings;
 
     public function __construct(FilterDirectoryCollection $includeDirectories, FileCollection $includeFiles, FilterDirectoryCollection $excludeDirectories, FileCollection $excludeFiles, bool $restrictDeprecations, bool $restrictNotices, bool $restrictWarnings, bool $ignoreSuppressionOfDeprecations, bool $ignoreSuppressionOfPhpDeprecations, bool $ignoreSuppressionOfErrors, bool $ignoreSuppressionOfNotices, bool $ignoreSuppressionOfPhpNotices, bool $ignoreSuppressionOfWarnings, bool $ignoreSuppressionOfPhpWarnings)
     {

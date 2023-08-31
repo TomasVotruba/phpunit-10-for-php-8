@@ -18,8 +18,9 @@ final class Callback extends Constraint
 {
     /**
      * @psalm-var callable(CallbackInput $input): bool
+     * @readonly
      */
-    private readonly mixed $callback;
+    private mixed $callback;
 
     /**
      * @psalm-param callable(CallbackInput $input): bool $callback

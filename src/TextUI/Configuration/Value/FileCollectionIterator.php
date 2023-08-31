@@ -23,8 +23,9 @@ final class FileCollectionIterator implements Countable, Iterator
 {
     /**
      * @psalm-var list<File>
+     * @readonly
      */
-    private readonly array $files;
+    private array $files;
     private int $position = 0;
 
     public function __construct(FileCollection $files)

@@ -23,14 +23,38 @@ use PHPUnit\TextUI\XmlConfiguration\Logging\Logging;
  */
 abstract class Configuration
 {
-    private readonly ExtensionBootstrapCollection $extensions;
-    private readonly Source $source;
-    private readonly CodeCoverage $codeCoverage;
-    private readonly Groups $groups;
-    private readonly Logging $logging;
-    private readonly Php $php;
-    private readonly PHPUnit $phpunit;
-    private readonly TestSuiteCollection $testSuite;
+    /**
+     * @readonly
+     */
+    private ExtensionBootstrapCollection $extensions;
+    /**
+     * @readonly
+     */
+    private Source $source;
+    /**
+     * @readonly
+     */
+    private CodeCoverage $codeCoverage;
+    /**
+     * @readonly
+     */
+    private Groups $groups;
+    /**
+     * @readonly
+     */
+    private Logging $logging;
+    /**
+     * @readonly
+     */
+    private Php $php;
+    /**
+     * @readonly
+     */
+    private PHPUnit $phpunit;
+    /**
+     * @readonly
+     */
+    private TestSuiteCollection $testSuite;
 
     public function __construct(ExtensionBootstrapCollection $extensions, Source $source, CodeCoverage $codeCoverage, Groups $groups, Logging $logging, Php $php, PHPUnit $phpunit, TestSuiteCollection $testSuite)
     {
