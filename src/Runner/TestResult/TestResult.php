@@ -29,99 +29,126 @@ use PHPUnit\TestRunner\TestResult\Issues\Issue;
  */
 final class TestResult
 {
-    private readonly int $numberOfTests;
-    private readonly int $numberOfTestsRun;
-    private readonly int $numberOfAssertions;
+    /**
+     * @readonly
+     */
+    private int $numberOfTests;
+    /**
+     * @readonly
+     */
+    private int $numberOfTestsRun;
+    /**
+     * @readonly
+     */
+    private int $numberOfAssertions;
 
     /**
      * @psalm-var list<BeforeFirstTestMethodErrored|Errored>
+     * @readonly
      */
-    private readonly array $testErroredEvents;
+    private array $testErroredEvents;
 
     /**
      * @psalm-var list<Failed>
+     * @readonly
      */
-    private readonly array $testFailedEvents;
+    private array $testFailedEvents;
 
     /**
      * @psalm-var list<MarkedIncomplete>
+     * @readonly
      */
-    private readonly array $testMarkedIncompleteEvents;
+    private array $testMarkedIncompleteEvents;
 
     /**
      * @psalm-var list<TestSuiteSkipped>
+     * @readonly
      */
-    private readonly array $testSuiteSkippedEvents;
+    private array $testSuiteSkippedEvents;
 
     /**
      * @psalm-var list<TestSkipped>
+     * @readonly
      */
-    private readonly array $testSkippedEvents;
+    private array $testSkippedEvents;
 
     /**
      * @psalm-var array<string,list<ConsideredRisky>>
+     * @readonly
      */
-    private readonly array $testConsideredRiskyEvents;
+    private array $testConsideredRiskyEvents;
 
     /**
      * @psalm-var array<string,list<PhpunitDeprecationTriggered>>
+     * @readonly
      */
-    private readonly array $testTriggeredPhpunitDeprecationEvents;
+    private array $testTriggeredPhpunitDeprecationEvents;
 
     /**
      * @psalm-var array<string,list<PhpunitErrorTriggered>>
+     * @readonly
      */
-    private readonly array $testTriggeredPhpunitErrorEvents;
+    private array $testTriggeredPhpunitErrorEvents;
 
     /**
      * @psalm-var array<string,list<PhpunitWarningTriggered>>
+     * @readonly
      */
-    private readonly array $testTriggeredPhpunitWarningEvents;
+    private array $testTriggeredPhpunitWarningEvents;
 
     /**
      * @psalm-var list<TestRunnerDeprecationTriggered>
+     * @readonly
      */
-    private readonly array $testRunnerTriggeredDeprecationEvents;
+    private array $testRunnerTriggeredDeprecationEvents;
 
     /**
      * @psalm-var list<TestRunnerWarningTriggered>
+     * @readonly
      */
-    private readonly array $testRunnerTriggeredWarningEvents;
+    private array $testRunnerTriggeredWarningEvents;
 
     /**
      * @psalm-var list<Issue>
+     * @readonly
      */
-    private readonly array $errors;
+    private array $errors;
 
     /**
      * @psalm-var list<Issue>
+     * @readonly
      */
-    private readonly array $deprecations;
+    private array $deprecations;
 
     /**
      * @psalm-var list<Issue>
+     * @readonly
      */
-    private readonly array $notices;
+    private array $notices;
 
     /**
      * @psalm-var list<Issue>
+     * @readonly
      */
-    private readonly array $warnings;
+    private array $warnings;
 
     /**
      * @psalm-var list<Issue>
+     * @readonly
      */
-    private readonly array $phpDeprecations;
+    private array $phpDeprecations;
 
     /**
      * @psalm-var list<Issue>
+     * @readonly
      */
-    private readonly array $phpNotices;
+    private array $phpNotices;
 
     /**
      * @psalm-var list<Issue>
+     * @readonly
      */
-    private readonly array $phpWarnings;
+    private array $phpWarnings;
 
     /**
      * @psalm-param list<BeforeFirstTestMethodErrored|Errored> $testErroredEvents

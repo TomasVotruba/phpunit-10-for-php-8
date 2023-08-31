@@ -19,15 +19,42 @@ use PHPUnit\TextUI\Configuration\NoCustomCssFileException;
  */
 final class Html
 {
-    private readonly Directory $target;
-    private readonly int $lowUpperBound;
-    private readonly int $highLowerBound;
-    private readonly string $colorSuccessLow;
-    private readonly string $colorSuccessMedium;
-    private readonly string $colorSuccessHigh;
-    private readonly string $colorWarning;
-    private readonly string $colorDanger;
-    private readonly ?string $customCssFile;
+    /**
+     * @readonly
+     */
+    private Directory $target;
+    /**
+     * @readonly
+     */
+    private int $lowUpperBound;
+    /**
+     * @readonly
+     */
+    private int $highLowerBound;
+    /**
+     * @readonly
+     */
+    private string $colorSuccessLow;
+    /**
+     * @readonly
+     */
+    private string $colorSuccessMedium;
+    /**
+     * @readonly
+     */
+    private string $colorSuccessHigh;
+    /**
+     * @readonly
+     */
+    private string $colorWarning;
+    /**
+     * @readonly
+     */
+    private string $colorDanger;
+    /**
+     * @readonly
+     */
+    private ?string $customCssFile;
 
     public function __construct(Directory $target, int $lowUpperBound, int $highLowerBound, string $colorSuccessLow, string $colorSuccessMedium, string $colorSuccessHigh, string $colorWarning, string $colorDanger, ?string $customCssFile)
     {

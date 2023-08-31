@@ -19,8 +19,14 @@ use PHPUnit\Framework\UnknownClassOrInterfaceException;
  */
 final class IsInstanceOf extends Constraint
 {
-    private readonly string $name;
-    private readonly string $type;
+    /**
+     * @readonly
+     */
+    private string $name;
+    /**
+     * @readonly
+     */
+    private string $type;
 
     /**
      * @throws UnknownClassOrInterfaceException

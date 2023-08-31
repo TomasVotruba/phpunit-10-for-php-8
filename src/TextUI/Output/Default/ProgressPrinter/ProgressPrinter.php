@@ -37,10 +37,22 @@ use PHPUnit\Util\Color;
  */
 final class ProgressPrinter
 {
-    private readonly Printer $printer;
-    private readonly bool $colors;
-    private readonly int $numberOfColumns;
-    private readonly Source $source;
+    /**
+     * @readonly
+     */
+    private Printer $printer;
+    /**
+     * @readonly
+     */
+    private bool $colors;
+    /**
+     * @readonly
+     */
+    private int $numberOfColumns;
+    /**
+     * @readonly
+     */
+    private Source $source;
     private int $column             = 0;
     private int $numberOfTests      = 0;
     private int $numberOfTestsWidth = 0;

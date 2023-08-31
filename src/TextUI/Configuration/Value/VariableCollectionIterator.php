@@ -23,8 +23,9 @@ final class VariableCollectionIterator implements Countable, Iterator
 {
     /**
      * @psalm-var list<Variable>
+     * @readonly
      */
-    private readonly array $variables;
+    private array $variables;
     private int $position = 0;
 
     public function __construct(VariableCollection $variables)

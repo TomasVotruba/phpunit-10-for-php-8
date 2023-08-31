@@ -21,8 +21,9 @@ final class Group
 {
     /**
      * @psalm-var non-empty-string
+     * @readonly
      */
-    private readonly string $name;
+    private string $name;
 
     /**
      * @psalm-param non-empty-string $name

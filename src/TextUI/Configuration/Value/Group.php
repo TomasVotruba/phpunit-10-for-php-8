@@ -16,7 +16,10 @@ namespace PHPUnit\TextUI\Configuration;
  */
 final class Group
 {
-    private readonly string $name;
+    /**
+     * @readonly
+     */
+    private string $name;
 
     public function __construct(string $name)
     {

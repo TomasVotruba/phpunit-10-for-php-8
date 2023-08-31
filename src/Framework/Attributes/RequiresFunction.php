@@ -21,8 +21,9 @@ final class RequiresFunction
 {
     /**
      * @psalm-var non-empty-string
+     * @readonly
      */
-    private readonly string $functionName;
+    private string $functionName;
 
     /**
      * @psalm-param non-empty-string $functionName

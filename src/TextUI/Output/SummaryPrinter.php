@@ -18,8 +18,14 @@ use PHPUnit\Util\Color;
  */
 final class SummaryPrinter
 {
-    private readonly Printer $printer;
-    private readonly bool $colors;
+    /**
+     * @readonly
+     */
+    private Printer $printer;
+    /**
+     * @readonly
+     */
+    private bool $colors;
     private bool $countPrinted = false;
 
     public function __construct(Printer $printer, bool $colors)

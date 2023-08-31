@@ -21,7 +21,10 @@ use SebastianBergmann\Comparator\ComparisonFailure;
  */
 final class IsIdentical extends Constraint
 {
-    private readonly mixed $value;
+    /**
+     * @readonly
+     */
+    private mixed $value;
 
     public function __construct(mixed $value)
     {

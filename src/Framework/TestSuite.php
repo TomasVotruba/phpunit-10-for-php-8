@@ -369,8 +369,9 @@ class TestSuite implements IteratorAggregate, Reorderable, SelfDescribing, Test
      * Mark the test suite as skipped.
      *
      * @throws SkippedTestSuiteError
+     * @return never
      */
-    public function markTestSuiteSkipped(string $message = ''): never
+    public function markTestSuiteSkipped(string $message = '')
     {
         throw new SkippedTestSuiteError($message);
     }
