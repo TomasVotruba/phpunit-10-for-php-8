@@ -16,9 +16,18 @@ namespace PHPUnit\Event\Code;
  */
 final class TestDox
 {
-    private readonly string $prettifiedClassName;
-    private readonly string $prettifiedMethodName;
-    private readonly string $prettifiedAndColorizedMethodName;
+    /**
+     * @readonly
+     */
+    private string $prettifiedClassName;
+    /**
+     * @readonly
+     */
+    private string $prettifiedMethodName;
+    /**
+     * @readonly
+     */
+    private string $prettifiedAndColorizedMethodName;
 
     public function __construct(string $prettifiedClassName, string $prettifiedMethodName, string $prettifiedAndColorizedMethodName)
     {

@@ -32,9 +32,13 @@ final class InvocationHandler
 
     /**
      * @psalm-var list<ConfigurableMethod>
+     * @readonly
      */
-    private readonly array $configurableMethods;
-    private readonly bool $returnValueGeneration;
+    private array $configurableMethods;
+    /**
+     * @readonly
+     */
+    private bool $returnValueGeneration;
 
     /**
      * @psalm-param list<ConfigurableMethod> $configurableMethods

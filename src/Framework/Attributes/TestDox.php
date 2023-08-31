@@ -21,8 +21,9 @@ final class TestDox
 {
     /**
      * @psalm-var non-empty-string
+     * @readonly
      */
-    private readonly string $text;
+    private string $text;
 
     /**
      * @psalm-param non-empty-string $text

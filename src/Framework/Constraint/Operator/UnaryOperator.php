@@ -16,7 +16,10 @@ use function count;
  */
 abstract class UnaryOperator extends Operator
 {
-    private readonly Constraint $constraint;
+    /**
+     * @readonly
+     */
+    private Constraint $constraint;
 
     public function __construct(mixed $constraint)
     {

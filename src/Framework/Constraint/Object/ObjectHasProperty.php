@@ -19,7 +19,10 @@ use ReflectionObject;
  */
 final class ObjectHasProperty extends Constraint
 {
-    private readonly string $propertyName;
+    /**
+     * @readonly
+     */
+    private string $propertyName;
 
     public function __construct(string $propertyName)
     {

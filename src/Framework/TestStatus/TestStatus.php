@@ -16,7 +16,10 @@ namespace PHPUnit\Framework\TestStatus;
  */
 abstract class TestStatus
 {
-    private readonly string $message;
+    /**
+     * @readonly
+     */
+    private string $message;
 
     public static function from(int $status): self
     {

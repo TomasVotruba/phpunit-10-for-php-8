@@ -19,8 +19,9 @@ abstract class BinaryOperator extends Operator
 {
     /**
      * @psalm-var list<Constraint>
+     * @readonly
      */
-    private readonly array $constraints;
+    private array $constraints;
 
     protected function __construct(mixed ...$constraints)
     {

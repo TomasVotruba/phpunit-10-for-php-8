@@ -18,7 +18,10 @@ use PHPUnit\TextUI\Output\Printer;
 
 final class UnexpectedOutputPrinter implements PrintedUnexpectedOutputSubscriber
 {
-    private readonly Printer $printer;
+    /**
+     * @readonly
+     */
+    private Printer $printer;
 
     /**
      * @throws EventFacadeIsSealedException

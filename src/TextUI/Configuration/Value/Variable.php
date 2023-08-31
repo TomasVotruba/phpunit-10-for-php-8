@@ -16,9 +16,18 @@ namespace PHPUnit\TextUI\Configuration;
  */
 final class Variable
 {
-    private readonly string $name;
-    private readonly mixed $value;
-    private readonly bool $force;
+    /**
+     * @readonly
+     */
+    private string $name;
+    /**
+     * @readonly
+     */
+    private mixed $value;
+    /**
+     * @readonly
+     */
+    private bool $force;
 
     public function __construct(string $name, mixed $value, bool $force)
     {

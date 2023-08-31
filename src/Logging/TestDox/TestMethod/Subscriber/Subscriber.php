@@ -14,7 +14,10 @@ namespace PHPUnit\Logging\TestDox;
  */
 abstract class Subscriber
 {
-    private readonly TestResultCollector $collector;
+    /**
+     * @readonly
+     */
+    private TestResultCollector $collector;
 
     public function __construct(TestResultCollector $collector)
     {

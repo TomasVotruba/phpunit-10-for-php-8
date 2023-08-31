@@ -20,8 +20,14 @@ use PHPUnit\Event\Telemetry;
  */
 final class DeprecationTriggered implements Event
 {
-    private readonly Telemetry\Info $telemetryInfo;
-    private readonly string $message;
+    /**
+     * @readonly
+     */
+    private Telemetry\Info $telemetryInfo;
+    /**
+     * @readonly
+     */
+    private string $message;
 
     public function __construct(Telemetry\Info $telemetryInfo, string $message)
     {

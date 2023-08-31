@@ -18,17 +18,22 @@ use PHPUnit\Framework\MockObject\ConfigurableMethod;
  */
 final class MockClass implements MockType
 {
-    private readonly string $classCode;
+    /**
+     * @readonly
+     */
+    private string $classCode;
 
     /**
      * @psalm-var class-string
+     * @readonly
      */
-    private readonly string $mockName;
+    private string $mockName;
 
     /**
      * @psalm-var list<ConfigurableMethod>
+     * @readonly
      */
-    private readonly array $configurableMethods;
+    private array $configurableMethods;
 
     /**
      * @psalm-param class-string $mockName
