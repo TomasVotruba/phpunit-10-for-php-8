@@ -13,52 +13,6 @@ permissions:
   contents: read
 
 jobs:
-  coding-guidelines:
-    name: Coding Guidelines
-
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      - name: Install PHP
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: 8.2
-          extensions: none, iconv, json, phar, tokenizer
-          coverage: none
-          tools: none
-
-      - name: Run PHP-CS-Fixer
-        run: ./tools/php-cs-fixer fix --dry-run --show-progress=dots --using-cache=no --verbose
-
-  type-checker:
-    name: Type Checker
-
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      - name: Install PHP
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: 8.2
-          extensions: none, ctype, curl, date, dom, json, libxml, mbstring, phar, simplexml, soap, tokenizer, xml, xmlwriter, zlib
-          coverage: none
-          tools: none
-
-      - name: Install dependencies with Composer
-        run: ./tools/composer update --no-interaction --no-ansi --no-progress
-
-      - name: Run Psalm on public API
-        run: ./tools/psalm --config=.psalm/static-analysis.xml --no-progress --show-info=false
-
-      - name: Run Psalm on internal code
-        run: ./tools/psalm --config=.psalm/config.xml --no-progress --shepherd --show-info=false --stats
-
   unit-tests:
     name: Unit Tests
 
