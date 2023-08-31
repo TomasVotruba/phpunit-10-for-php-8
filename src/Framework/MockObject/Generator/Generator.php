@@ -618,10 +618,6 @@ final class Generator
         } else {
             $class = $this->reflectClass($_mockClassName['fullClassName']);
 
-            if ($class->isEnum()) {
-                throw new ClassIsEnumerationException($_mockClassName['fullClassName']);
-            }
-
             if ($class->isFinal()) {
                 throw new ClassIsFinalException($_mockClassName['fullClassName']);
             }

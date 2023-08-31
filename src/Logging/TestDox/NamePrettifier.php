@@ -241,15 +241,7 @@ final class NamePrettifier
             if (is_object($value)) {
                 $reflector = new ReflectionObject($value);
 
-                if ($reflector->isEnum()) {
-                    $enumReflector = new ReflectionEnum($value);
-
-                    if ($enumReflector->isBacked()) {
-                        $value = $value->value;
-                    } else {
-                        $value = $value->name;
-                    }
-                } elseif ($reflector->hasMethod('__toString')) {
+                if ($reflector->hasMethod('__toString')) {
                     $value = (string) $value;
                 } else {
                     $value = $value::class;
