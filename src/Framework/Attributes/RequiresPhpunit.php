@@ -21,8 +21,9 @@ final class RequiresPhpunit
 {
     /**
      * @psalm-var non-empty-string
+     * @readonly
      */
-    private readonly string $versionRequirement;
+    private string $versionRequirement;
 
     /**
      * @psalm-param non-empty-string $versionRequirement

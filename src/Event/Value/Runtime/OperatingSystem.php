@@ -19,8 +19,14 @@ use const PHP_OS_FAMILY;
  */
 final class OperatingSystem
 {
-    private readonly string $operatingSystem;
-    private readonly string $operatingSystemFamily;
+    /**
+     * @readonly
+     */
+    private string $operatingSystem;
+    /**
+     * @readonly
+     */
+    private string $operatingSystemFamily;
 
     public function __construct()
     {

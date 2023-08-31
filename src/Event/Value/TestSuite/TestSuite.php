@@ -20,10 +20,17 @@ abstract class TestSuite
 {
     /**
      * @psalm-var non-empty-string
+     * @readonly
      */
-    private readonly string $name;
-    private readonly int $count;
-    private readonly TestCollection $tests;
+    private string $name;
+    /**
+     * @readonly
+     */
+    private int $count;
+    /**
+     * @readonly
+     */
+    private TestCollection $tests;
 
     /**
      * @psalm-param non-empty-string $name

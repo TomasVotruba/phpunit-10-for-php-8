@@ -16,7 +16,10 @@ use function sprintf;
  */
 final class ExceptionCode extends Constraint
 {
-    private readonly int|string $expectedCode;
+    /**
+     * @readonly
+     */
+    private int|string $expectedCode;
 
     public function __construct(int|string $expected)
     {

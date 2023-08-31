@@ -24,8 +24,9 @@ final class TestFileCollection implements Countable, IteratorAggregate
 {
     /**
      * @psalm-var list<TestFile>
+     * @readonly
      */
-    private readonly array $files;
+    private array $files;
 
     /**
      * @psalm-param list<TestFile> $files

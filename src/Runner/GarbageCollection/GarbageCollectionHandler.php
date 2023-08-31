@@ -21,8 +21,14 @@ use PHPUnit\Event\UnknownSubscriberTypeException;
  */
 final class GarbageCollectionHandler
 {
-    private readonly Facade $facade;
-    private readonly int $threshold;
+    /**
+     * @readonly
+     */
+    private Facade $facade;
+    /**
+     * @readonly
+     */
+    private int $threshold;
     private int $tests = 0;
 
     /**

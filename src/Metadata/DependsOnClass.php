@@ -18,10 +18,17 @@ final class DependsOnClass extends Metadata
 {
     /**
      * @psalm-var class-string
+     * @readonly
      */
-    private readonly string $className;
-    private readonly bool $deepClone;
-    private readonly bool $shallowClone;
+    private string $className;
+    /**
+     * @readonly
+     */
+    private bool $deepClone;
+    /**
+     * @readonly
+     */
+    private bool $shallowClone;
 
     /**
      * @psalm-param 0|1 $level

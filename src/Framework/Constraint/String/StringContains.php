@@ -21,9 +21,18 @@ use function strtr;
  */
 final class StringContains extends Constraint
 {
-    private readonly string $string;
-    private readonly bool $ignoreCase;
-    private readonly bool $ignoreLineEndings;
+    /**
+     * @readonly
+     */
+    private string $string;
+    /**
+     * @readonly
+     */
+    private bool $ignoreCase;
+    /**
+     * @readonly
+     */
+    private bool $ignoreLineEndings;
 
     public function __construct(string $string, bool $ignoreCase = false, bool $ignoreLineEndings = false)
     {

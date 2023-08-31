@@ -18,13 +18,15 @@ final class RequiresSetting extends Metadata
 {
     /**
      * @psalm-var non-empty-string
+     * @readonly
      */
-    private readonly string $setting;
+    private string $setting;
 
     /**
      * @psalm-var non-empty-string
+     * @readonly
      */
-    private readonly string $value;
+    private string $value;
 
     /**
      * @psalm-param 0|1 $level

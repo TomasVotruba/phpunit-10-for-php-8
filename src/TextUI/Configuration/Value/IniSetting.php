@@ -16,8 +16,14 @@ namespace PHPUnit\TextUI\Configuration;
  */
 final class IniSetting
 {
-    private readonly string $name;
-    private readonly string $value;
+    /**
+     * @readonly
+     */
+    private string $name;
+    /**
+     * @readonly
+     */
+    private string $value;
 
     public function __construct(string $name, string $value)
     {

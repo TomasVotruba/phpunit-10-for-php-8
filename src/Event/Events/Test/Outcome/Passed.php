@@ -21,8 +21,14 @@ use PHPUnit\Event\Telemetry;
  */
 final class Passed implements Event
 {
-    private readonly Telemetry\Info $telemetryInfo;
-    private readonly Code\Test $test;
+    /**
+     * @readonly
+     */
+    private Telemetry\Info $telemetryInfo;
+    /**
+     * @readonly
+     */
+    private Code\Test $test;
 
     public function __construct(Telemetry\Info $telemetryInfo, Code\Test $test)
     {

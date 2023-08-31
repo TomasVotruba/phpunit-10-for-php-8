@@ -19,7 +19,10 @@ use PHPUnit\Event\Telemetry;
  */
 final class GarbageCollectionEnabled implements Event
 {
-    private readonly Telemetry\Info $telemetryInfo;
+    /**
+     * @readonly
+     */
+    private Telemetry\Info $telemetryInfo;
 
     public function __construct(Telemetry\Info $telemetryInfo)
     {
