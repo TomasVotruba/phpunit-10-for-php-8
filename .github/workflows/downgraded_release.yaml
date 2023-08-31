@@ -34,7 +34,7 @@ jobs:
             -   run: cp build/composer-php-80.json composer.json
 
             # clear the dev files
-            -   run: rm -rf build .github tests schema rector-local .gitignore
+            -   run: rm -rf build .github tests rector-local .gitignore
 
             # setup git user
             -
