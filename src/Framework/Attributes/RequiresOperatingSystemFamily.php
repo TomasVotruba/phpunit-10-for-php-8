@@ -21,8 +21,9 @@ final class RequiresOperatingSystemFamily
 {
     /**
      * @psalm-var non-empty-string
+     * @readonly
      */
-    private readonly string $operatingSystemFamily;
+    private string $operatingSystemFamily;
 
     /**
      * @psalm-param non-empty-string $operatingSystemFamily

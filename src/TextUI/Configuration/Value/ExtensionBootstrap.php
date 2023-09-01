@@ -18,13 +18,15 @@ final class ExtensionBootstrap
 {
     /**
      * @psalm-var class-string
+     * @readonly
      */
-    private readonly string $className;
+    private string $className;
 
     /**
      * @psalm-var array<string,string>
+     * @readonly
      */
-    private readonly array $parameters;
+    private array $parameters;
 
     /**
      * @psalm-param class-string $className

@@ -43,12 +43,16 @@ final class DocBlock
     private const REGEX_REQUIRES_OS                 = '/@requires\s+(?P<name>OS(?:FAMILY)?)\s+(?P<value>.+?)[ \t]*\r?$/m';
     private const REGEX_REQUIRES_SETTING            = '/@requires\s+(?P<name>setting)\s+(?P<setting>([^ ]+?))\s*(?P<value>[\w\.-]+[\w\.]?)?[ \t]*\r?$/m';
     private const REGEX_REQUIRES                    = '/@requires\s+(?P<name>function|extension)\s+(?P<value>([^\s<>=!]+))\s*(?P<operator>[<>=!]{0,2})\s*(?P<version>[\d\.-]+[\d\.]?)?[ \t]*\r?$/m';
-    private readonly string $docComment;
+    /**
+     * @readonly
+     */
+    private string $docComment;
 
     /**
      * @psalm-var array<string, array<int, string>> pre-parsed annotations indexed by name and occurrence index
+     * @readonly
      */
-    private readonly array $symbolAnnotations;
+    private array $symbolAnnotations;
 
     /**
      * @psalm-var null|(array{
@@ -61,8 +65,14 @@ final class DocBlock
      * >)
      */
     private ?array $parsedRequirements = null;
-    private readonly int $startLine;
-    private readonly string $fileName;
+    /**
+     * @readonly
+     */
+    private int $startLine;
+    /**
+     * @readonly
+     */
+    private string $fileName;
 
     /**
      * @throws AnnotationsAreNotSupportedForInternalClassesException

@@ -18,8 +18,9 @@ final class RequiresOperatingSystemFamily extends Metadata
 {
     /**
      * @psalm-var non-empty-string
+     * @readonly
      */
-    private readonly string $operatingSystemFamily;
+    private string $operatingSystemFamily;
 
     /**
      * @psalm-param 0|1 $level

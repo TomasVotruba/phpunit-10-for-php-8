@@ -26,8 +26,9 @@ final class MetadataCollection implements Countable, IteratorAggregate
 {
     /**
      * @psalm-var list<Metadata>
+     * @readonly
      */
-    private readonly array $metadata;
+    private array $metadata;
 
     /**
      * @psalm-param list<Metadata> $metadata

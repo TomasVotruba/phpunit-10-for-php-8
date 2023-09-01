@@ -21,8 +21,9 @@ final class EventCollectionIterator implements Iterator
 {
     /**
      * @psalm-var list<Event>
+     * @readonly
      */
-    private readonly array $events;
+    private array $events;
     private int $position = 0;
 
     public function __construct(EventCollection $events)

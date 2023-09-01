@@ -22,10 +22,22 @@ use SebastianBergmann\Comparator\Factory as ComparatorFactory;
  */
 final class IsEqual extends Constraint
 {
-    private readonly mixed $value;
-    private readonly float $delta;
-    private readonly bool $canonicalize;
-    private readonly bool $ignoreCase;
+    /**
+     * @readonly
+     */
+    private mixed $value;
+    /**
+     * @readonly
+     */
+    private float $delta;
+    /**
+     * @readonly
+     */
+    private bool $canonicalize;
+    /**
+     * @readonly
+     */
+    private bool $ignoreCase;
 
     public function __construct(mixed $value, float $delta = 0.0, bool $canonicalize = false, bool $ignoreCase = false)
     {

@@ -34,12 +34,16 @@ use ReflectionClass;
  */
 final class MockBuilder
 {
-    private readonly TestCase $testCase;
+    /**
+     * @readonly
+     */
+    private TestCase $testCase;
 
     /**
      * @psalm-var class-string|trait-string
+     * @readonly
      */
-    private readonly string $type;
+    private string $type;
 
     /**
      * @psalm-var list<non-empty-string>
@@ -60,7 +64,10 @@ final class MockBuilder
     private ?object $proxyTarget           = null;
     private bool $allowMockingUnknownTypes = true;
     private bool $returnValueGeneration    = true;
-    private readonly Generator $generator;
+    /**
+     * @readonly
+     */
+    private Generator $generator;
 
     /**
      * @psalm-param class-string|trait-string $type

@@ -25,21 +25,33 @@ final class TestMethod extends Test
 {
     /**
      * @psalm-var class-string
+     * @readonly
      */
-    private readonly string $className;
+    private string $className;
 
     /**
      * @psalm-var non-empty-string
+     * @readonly
      */
-    private readonly string $methodName;
+    private string $methodName;
 
     /**
      * @psalm-var non-negative-int
+     * @readonly
      */
-    private readonly int $line;
-    private readonly TestDox $testDox;
-    private readonly MetadataCollection $metadata;
-    private readonly TestDataCollection $testData;
+    private int $line;
+    /**
+     * @readonly
+     */
+    private TestDox $testDox;
+    /**
+     * @readonly
+     */
+    private MetadataCollection $metadata;
+    /**
+     * @readonly
+     */
+    private TestDataCollection $testData;
 
     /**
      * @psalm-param class-string $className

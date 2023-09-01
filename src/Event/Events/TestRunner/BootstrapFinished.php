@@ -20,8 +20,14 @@ use PHPUnit\Event\Telemetry;
  */
 final class BootstrapFinished implements Event
 {
-    private readonly Telemetry\Info $telemetryInfo;
-    private readonly string $filename;
+    /**
+     * @readonly
+     */
+    private Telemetry\Info $telemetryInfo;
+    /**
+     * @readonly
+     */
+    private string $filename;
 
     public function __construct(Telemetry\Info $telemetryInfo, string $filename)
     {

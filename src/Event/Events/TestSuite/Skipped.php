@@ -20,9 +20,18 @@ use PHPUnit\Event\Telemetry;
  */
 final class Skipped implements Event
 {
-    private readonly Telemetry\Info $telemetryInfo;
-    private readonly TestSuite $testSuite;
-    private readonly string $message;
+    /**
+     * @readonly
+     */
+    private Telemetry\Info $telemetryInfo;
+    /**
+     * @readonly
+     */
+    private TestSuite $testSuite;
+    /**
+     * @readonly
+     */
+    private string $message;
 
     public function __construct(Telemetry\Info $telemetryInfo, TestSuite $testSuite, string $message)
     {

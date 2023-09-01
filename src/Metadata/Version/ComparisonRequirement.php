@@ -19,8 +19,14 @@ use PHPUnit\Util\VersionComparisonOperator;
  */
 final class ComparisonRequirement extends Requirement
 {
-    private readonly string $version;
-    private readonly VersionComparisonOperator $operator;
+    /**
+     * @readonly
+     */
+    private string $version;
+    /**
+     * @readonly
+     */
+    private VersionComparisonOperator $operator;
 
     public function __construct(string $version, VersionComparisonOperator $operator)
     {
