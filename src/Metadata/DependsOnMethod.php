@@ -18,15 +18,23 @@ final class DependsOnMethod extends Metadata
 {
     /**
      * @psalm-var class-string
+     * @readonly
      */
-    private readonly string $className;
+    private string $className;
 
     /**
      * @psalm-var non-empty-string
+     * @readonly
      */
-    private readonly string $methodName;
-    private readonly bool $deepClone;
-    private readonly bool $shallowClone;
+    private string $methodName;
+    /**
+     * @readonly
+     */
+    private bool $deepClone;
+    /**
+     * @readonly
+     */
+    private bool $shallowClone;
 
     /**
      * @psalm-param 0|1 $level

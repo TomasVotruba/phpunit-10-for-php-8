@@ -20,8 +20,14 @@ use PHPUnit\Event\Telemetry;
  */
 final class Finished implements Event
 {
-    private readonly Telemetry\Info $telemetryInfo;
-    private readonly int $shellExitCode;
+    /**
+     * @readonly
+     */
+    private Telemetry\Info $telemetryInfo;
+    /**
+     * @readonly
+     */
+    private int $shellExitCode;
 
     public function __construct(Telemetry\Info $telemetryInfo, int $shellExitCode)
     {

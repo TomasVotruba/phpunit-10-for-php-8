@@ -18,8 +18,9 @@ final class Group extends Metadata
 {
     /**
      * @psalm-var non-empty-string
+     * @readonly
      */
-    private readonly string $groupName;
+    private string $groupName;
 
     /**
      * @psalm-param 0|1 $level

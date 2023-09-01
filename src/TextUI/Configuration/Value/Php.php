@@ -16,17 +16,50 @@ namespace PHPUnit\TextUI\Configuration;
  */
 final class Php
 {
-    private readonly DirectoryCollection $includePaths;
-    private readonly IniSettingCollection $iniSettings;
-    private readonly ConstantCollection $constants;
-    private readonly VariableCollection $globalVariables;
-    private readonly VariableCollection $envVariables;
-    private readonly VariableCollection $postVariables;
-    private readonly VariableCollection $getVariables;
-    private readonly VariableCollection $cookieVariables;
-    private readonly VariableCollection $serverVariables;
-    private readonly VariableCollection $filesVariables;
-    private readonly VariableCollection $requestVariables;
+    /**
+     * @readonly
+     */
+    private DirectoryCollection $includePaths;
+    /**
+     * @readonly
+     */
+    private IniSettingCollection $iniSettings;
+    /**
+     * @readonly
+     */
+    private ConstantCollection $constants;
+    /**
+     * @readonly
+     */
+    private VariableCollection $globalVariables;
+    /**
+     * @readonly
+     */
+    private VariableCollection $envVariables;
+    /**
+     * @readonly
+     */
+    private VariableCollection $postVariables;
+    /**
+     * @readonly
+     */
+    private VariableCollection $getVariables;
+    /**
+     * @readonly
+     */
+    private VariableCollection $cookieVariables;
+    /**
+     * @readonly
+     */
+    private VariableCollection $serverVariables;
+    /**
+     * @readonly
+     */
+    private VariableCollection $filesVariables;
+    /**
+     * @readonly
+     */
+    private VariableCollection $requestVariables;
 
     public function __construct(DirectoryCollection $includePaths, IniSettingCollection $iniSettings, ConstantCollection $constants, VariableCollection $globalVariables, VariableCollection $envVariables, VariableCollection $postVariables, VariableCollection $getVariables, VariableCollection $cookieVariables, VariableCollection $serverVariables, VariableCollection $filesVariables, VariableCollection $requestVariables)
     {

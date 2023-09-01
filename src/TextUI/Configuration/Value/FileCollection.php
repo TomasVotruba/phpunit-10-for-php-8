@@ -24,8 +24,9 @@ final class FileCollection implements Countable, IteratorAggregate
 {
     /**
      * @psalm-var list<File>
+     * @readonly
      */
-    private readonly array $files;
+    private array $files;
 
     /**
      * @psalm-param list<File> $files

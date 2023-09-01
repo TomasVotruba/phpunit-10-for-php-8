@@ -16,7 +16,10 @@ use PHPUnit\Framework\MockObject\Invocation;
  */
 final class ReturnArgument implements Stub
 {
-    private readonly int $argumentIndex;
+    /**
+     * @readonly
+     */
+    private int $argumentIndex;
 
     public function __construct(int $argumentIndex)
     {

@@ -20,10 +20,22 @@ use PHPUnit\TextUI\XmlConfiguration\Logging\TestDox\Text as TestDoxText;
  */
 final class Logging
 {
-    private readonly ?Junit $junit;
-    private readonly ?TeamCity $teamCity;
-    private readonly ?TestDoxHtml $testDoxHtml;
-    private readonly ?TestDoxText $testDoxText;
+    /**
+     * @readonly
+     */
+    private ?Junit $junit;
+    /**
+     * @readonly
+     */
+    private ?TeamCity $teamCity;
+    /**
+     * @readonly
+     */
+    private ?TestDoxHtml $testDoxHtml;
+    /**
+     * @readonly
+     */
+    private ?TestDoxText $testDoxText;
 
     public function __construct(?Junit $junit, ?TeamCity $teamCity, ?TestDoxHtml $testDoxHtml, ?TestDoxText $testDoxText)
     {

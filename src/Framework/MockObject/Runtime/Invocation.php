@@ -27,18 +27,35 @@ final class Invocation implements SelfDescribing
 {
     /**
      * @psalm-var class-string
+     * @readonly
      */
-    private readonly string $className;
+    private string $className;
 
     /**
      * @psalm-var non-empty-string
+     * @readonly
      */
-    private readonly string $methodName;
-    private readonly array $parameters;
-    private readonly string $returnType;
-    private readonly bool $isReturnTypeNullable;
-    private readonly bool $proxiedCall;
-    private readonly MockObjectInternal|StubInternal $object;
+    private string $methodName;
+    /**
+     * @readonly
+     */
+    private array $parameters;
+    /**
+     * @readonly
+     */
+    private string $returnType;
+    /**
+     * @readonly
+     */
+    private bool $isReturnTypeNullable;
+    /**
+     * @readonly
+     */
+    private bool $proxiedCall;
+    /**
+     * @readonly
+     */
+    private MockObjectInternal|StubInternal $object;
 
     /**
      * @psalm-param class-string $className

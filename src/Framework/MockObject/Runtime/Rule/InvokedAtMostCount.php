@@ -18,7 +18,10 @@ use PHPUnit\Framework\MockObject\Invocation as BaseInvocation;
  */
 final class InvokedAtMostCount extends InvocationOrder
 {
-    private readonly int $allowedInvocations;
+    /**
+     * @readonly
+     */
+    private int $allowedInvocations;
 
     public function __construct(int $allowedInvocations)
     {

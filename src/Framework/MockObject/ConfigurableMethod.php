@@ -18,9 +18,13 @@ final class ConfigurableMethod
 {
     /**
      * @psalm-var non-empty-string
+     * @readonly
      */
-    private readonly string $name;
-    private readonly Type $returnType;
+    private string $name;
+    /**
+     * @readonly
+     */
+    private Type $returnType;
 
     /**
      * @psalm-param non-empty-string $name

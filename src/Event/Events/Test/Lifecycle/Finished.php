@@ -21,9 +21,18 @@ use PHPUnit\Event\Telemetry;
  */
 final class Finished implements Event
 {
-    private readonly Telemetry\Info $telemetryInfo;
-    private readonly Code\Test $test;
-    private readonly int $numberOfAssertionsPerformed;
+    /**
+     * @readonly
+     */
+    private Telemetry\Info $telemetryInfo;
+    /**
+     * @readonly
+     */
+    private Code\Test $test;
+    /**
+     * @readonly
+     */
+    private int $numberOfAssertionsPerformed;
 
     public function __construct(Telemetry\Info $telemetryInfo, Code\Test $test, int $numberOfAssertionsPerformed)
     {
