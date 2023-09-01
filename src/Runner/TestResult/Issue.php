@@ -18,18 +18,21 @@ final class Issue
 {
     /**
      * @psalm-var non-empty-string
+     * @readonly
      */
-    private readonly string $file;
+    private string $file;
 
     /**
      * @psalm-var positive-int
+     * @readonly
      */
-    private readonly int $line;
+    private int $line;
 
     /**
      * @psalm-var non-empty-string
+     * @readonly
      */
-    private readonly string $description;
+    private string $description;
 
     /**
      * @psalm-var non-empty-array<non-empty-string, array{test: Test, count: int}>

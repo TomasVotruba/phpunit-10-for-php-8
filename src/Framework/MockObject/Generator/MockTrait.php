@@ -18,12 +18,16 @@ use function class_exists;
  */
 final class MockTrait implements MockType
 {
-    private readonly string $classCode;
+    /**
+     * @readonly
+     */
+    private string $classCode;
 
     /**
      * @psalm-var class-string
+     * @readonly
      */
-    private readonly string $mockName;
+    private string $mockName;
 
     /**
      * @psalm-param class-string $mockName

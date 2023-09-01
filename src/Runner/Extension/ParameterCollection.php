@@ -19,7 +19,10 @@ use PHPUnit\Runner\ParameterDoesNotExistException;
  */
 final class ParameterCollection
 {
-    private readonly array $parameters;
+    /**
+     * @readonly
+     */
+    private array $parameters;
 
     /**
      * @psalm-param array<string, string> $parameters

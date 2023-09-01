@@ -18,7 +18,10 @@ use Exception;
  */
 final class ExceptionMessageMatchesRegularExpression extends Constraint
 {
-    private readonly string $regularExpression;
+    /**
+     * @readonly
+     */
+    private string $regularExpression;
 
     public function __construct(string $regularExpression)
     {

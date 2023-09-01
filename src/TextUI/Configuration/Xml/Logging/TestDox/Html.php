@@ -18,7 +18,10 @@ use PHPUnit\TextUI\Configuration\File;
  */
 final class Html
 {
-    private readonly File $target;
+    /**
+     * @readonly
+     */
+    private File $target;
 
     public function __construct(File $target)
     {

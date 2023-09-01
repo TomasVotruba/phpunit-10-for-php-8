@@ -21,8 +21,9 @@ final class TestWithJson
 {
     /**
      * @psalm-var non-empty-string
+     * @readonly
      */
-    private readonly string $json;
+    private string $json;
 
     /**
      * @psalm-param non-empty-string $json

@@ -22,8 +22,14 @@ use SebastianBergmann\Timer\Timer;
  */
 final class WarmCodeCoverageCacheCommand implements Command
 {
-    private readonly Configuration $configuration;
-    private readonly CodeCoverageFilterRegistry $codeCoverageFilterRegistry;
+    /**
+     * @readonly
+     */
+    private Configuration $configuration;
+    /**
+     * @readonly
+     */
+    private CodeCoverageFilterRegistry $codeCoverageFilterRegistry;
 
     public function __construct(Configuration $configuration, CodeCoverageFilterRegistry $codeCoverageFilterRegistry)
     {

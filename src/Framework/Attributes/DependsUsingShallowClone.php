@@ -21,8 +21,9 @@ final class DependsUsingShallowClone
 {
     /**
      * @psalm-var non-empty-string
+     * @readonly
      */
-    private readonly string $methodName;
+    private string $methodName;
 
     /**
      * @psalm-param non-empty-string $methodName

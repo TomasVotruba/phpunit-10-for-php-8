@@ -41,7 +41,10 @@ use PHPUnit\Util\Xml;
  */
 final class JunitXmlLogger
 {
-    private readonly Printer $printer;
+    /**
+     * @readonly
+     */
+    private Printer $printer;
     private DOMDocument $document;
     private DOMElement $root;
 

@@ -21,7 +21,10 @@ use SebastianBergmann\Comparator\ComparisonFailure;
  */
 final class JsonMatches extends Constraint
 {
-    private readonly string $value;
+    /**
+     * @readonly
+     */
+    private string $value;
 
     public function __construct(string $value)
     {
@@ -67,8 +70,9 @@ final class JsonMatches extends Constraint
      *
      * @throws ExpectationFailedException
      * @throws InvalidJsonException
+     * @return never
      */
-    protected function fail(mixed $other, string $description, ComparisonFailure $comparisonFailure = null): never
+    protected function fail(mixed $other, string $description, ComparisonFailure $comparisonFailure = null)
     {
         if ($comparisonFailure === null) {
             [$error, $recodedOther] = Json::canonicalize($other);

@@ -17,7 +17,10 @@ use function sprintf;
  */
 final class RegularExpression extends Constraint
 {
-    private readonly string $pattern;
+    /**
+     * @readonly
+     */
+    private string $pattern;
 
     public function __construct(string $pattern)
     {
