@@ -16,58 +16,214 @@ namespace PHPUnit\TextUI\XmlConfiguration;
  */
 final class PHPUnit
 {
-    private readonly ?string $cacheDirectory;
-    private readonly bool $cacheResult;
-    private readonly ?string $cacheResultFile;
-    private readonly int|string $columns;
-    private readonly string $colors;
-    private readonly bool $stderr;
-    private readonly bool $displayDetailsOnIncompleteTests;
-    private readonly bool $displayDetailsOnSkippedTests;
-    private readonly bool $displayDetailsOnTestsThatTriggerDeprecations;
-    private readonly bool $displayDetailsOnTestsThatTriggerErrors;
-    private readonly bool $displayDetailsOnTestsThatTriggerNotices;
-    private readonly bool $displayDetailsOnTestsThatTriggerWarnings;
-    private readonly bool $reverseDefectList;
-    private readonly bool $requireCoverageMetadata;
-    private readonly ?string $bootstrap;
-    private readonly bool $processIsolation;
-    private readonly bool $failOnDeprecation;
-    private readonly bool $failOnEmptyTestSuite;
-    private readonly bool $failOnIncomplete;
-    private readonly bool $failOnNotice;
-    private readonly bool $failOnRisky;
-    private readonly bool $failOnSkipped;
-    private readonly bool $failOnWarning;
-    private readonly bool $stopOnDefect;
-    private readonly bool $stopOnDeprecation;
-    private readonly bool $stopOnError;
-    private readonly bool $stopOnFailure;
-    private readonly bool $stopOnIncomplete;
-    private readonly bool $stopOnNotice;
-    private readonly bool $stopOnRisky;
-    private readonly bool $stopOnSkipped;
-    private readonly bool $stopOnWarning;
-    private readonly ?string $extensionsDirectory;
-    private readonly bool $beStrictAboutChangesToGlobalState;
-    private readonly bool $beStrictAboutOutputDuringTests;
-    private readonly bool $beStrictAboutTestsThatDoNotTestAnything;
-    private readonly bool $beStrictAboutCoverageMetadata;
-    private readonly bool $enforceTimeLimit;
-    private readonly int $defaultTimeLimit;
-    private readonly int $timeoutForSmallTests;
-    private readonly int $timeoutForMediumTests;
-    private readonly int $timeoutForLargeTests;
-    private readonly ?string $defaultTestSuite;
-    private readonly int $executionOrder;
-    private readonly bool $resolveDependencies;
-    private readonly bool $defectsFirst;
-    private readonly bool $backupGlobals;
-    private readonly bool $backupStaticProperties;
-    private readonly bool $registerMockObjectsFromTestArgumentsRecursively;
-    private readonly bool $testdoxPrinter;
-    private readonly bool $controlGarbageCollector;
-    private readonly int $numberOfTestsBeforeGarbageCollection;
+    /**
+     * @readonly
+     */
+    private ?string $cacheDirectory;
+    /**
+     * @readonly
+     */
+    private bool $cacheResult;
+    /**
+     * @readonly
+     */
+    private ?string $cacheResultFile;
+    /**
+     * @readonly
+     */
+    private int|string $columns;
+    /**
+     * @readonly
+     */
+    private string $colors;
+    /**
+     * @readonly
+     */
+    private bool $stderr;
+    /**
+     * @readonly
+     */
+    private bool $displayDetailsOnIncompleteTests;
+    /**
+     * @readonly
+     */
+    private bool $displayDetailsOnSkippedTests;
+    /**
+     * @readonly
+     */
+    private bool $displayDetailsOnTestsThatTriggerDeprecations;
+    /**
+     * @readonly
+     */
+    private bool $displayDetailsOnTestsThatTriggerErrors;
+    /**
+     * @readonly
+     */
+    private bool $displayDetailsOnTestsThatTriggerNotices;
+    /**
+     * @readonly
+     */
+    private bool $displayDetailsOnTestsThatTriggerWarnings;
+    /**
+     * @readonly
+     */
+    private bool $reverseDefectList;
+    /**
+     * @readonly
+     */
+    private bool $requireCoverageMetadata;
+    /**
+     * @readonly
+     */
+    private ?string $bootstrap;
+    /**
+     * @readonly
+     */
+    private bool $processIsolation;
+    /**
+     * @readonly
+     */
+    private bool $failOnDeprecation;
+    /**
+     * @readonly
+     */
+    private bool $failOnEmptyTestSuite;
+    /**
+     * @readonly
+     */
+    private bool $failOnIncomplete;
+    /**
+     * @readonly
+     */
+    private bool $failOnNotice;
+    /**
+     * @readonly
+     */
+    private bool $failOnRisky;
+    /**
+     * @readonly
+     */
+    private bool $failOnSkipped;
+    /**
+     * @readonly
+     */
+    private bool $failOnWarning;
+    /**
+     * @readonly
+     */
+    private bool $stopOnDefect;
+    /**
+     * @readonly
+     */
+    private bool $stopOnDeprecation;
+    /**
+     * @readonly
+     */
+    private bool $stopOnError;
+    /**
+     * @readonly
+     */
+    private bool $stopOnFailure;
+    /**
+     * @readonly
+     */
+    private bool $stopOnIncomplete;
+    /**
+     * @readonly
+     */
+    private bool $stopOnNotice;
+    /**
+     * @readonly
+     */
+    private bool $stopOnRisky;
+    /**
+     * @readonly
+     */
+    private bool $stopOnSkipped;
+    /**
+     * @readonly
+     */
+    private bool $stopOnWarning;
+    /**
+     * @readonly
+     */
+    private ?string $extensionsDirectory;
+    /**
+     * @readonly
+     */
+    private bool $beStrictAboutChangesToGlobalState;
+    /**
+     * @readonly
+     */
+    private bool $beStrictAboutOutputDuringTests;
+    /**
+     * @readonly
+     */
+    private bool $beStrictAboutTestsThatDoNotTestAnything;
+    /**
+     * @readonly
+     */
+    private bool $beStrictAboutCoverageMetadata;
+    /**
+     * @readonly
+     */
+    private bool $enforceTimeLimit;
+    /**
+     * @readonly
+     */
+    private int $defaultTimeLimit;
+    /**
+     * @readonly
+     */
+    private int $timeoutForSmallTests;
+    /**
+     * @readonly
+     */
+    private int $timeoutForMediumTests;
+    /**
+     * @readonly
+     */
+    private int $timeoutForLargeTests;
+    /**
+     * @readonly
+     */
+    private ?string $defaultTestSuite;
+    /**
+     * @readonly
+     */
+    private int $executionOrder;
+    /**
+     * @readonly
+     */
+    private bool $resolveDependencies;
+    /**
+     * @readonly
+     */
+    private bool $defectsFirst;
+    /**
+     * @readonly
+     */
+    private bool $backupGlobals;
+    /**
+     * @readonly
+     */
+    private bool $backupStaticProperties;
+    /**
+     * @readonly
+     */
+    private bool $registerMockObjectsFromTestArgumentsRecursively;
+    /**
+     * @readonly
+     */
+    private bool $testdoxPrinter;
+    /**
+     * @readonly
+     */
+    private bool $controlGarbageCollector;
+    /**
+     * @readonly
+     */
+    private int $numberOfTestsBeforeGarbageCollection;
 
     public function __construct(?string $cacheDirectory, bool $cacheResult, ?string $cacheResultFile, int|string $columns, string $colors, bool $stderr, bool $displayDetailsOnIncompleteTests, bool $displayDetailsOnSkippedTests, bool $displayDetailsOnTestsThatTriggerDeprecations, bool $displayDetailsOnTestsThatTriggerErrors, bool $displayDetailsOnTestsThatTriggerNotices, bool $displayDetailsOnTestsThatTriggerWarnings, bool $reverseDefectList, bool $requireCoverageMetadata, ?string $bootstrap, bool $processIsolation, bool $failOnDeprecation, bool $failOnEmptyTestSuite, bool $failOnIncomplete, bool $failOnNotice, bool $failOnRisky, bool $failOnSkipped, bool $failOnWarning, bool $stopOnDefect, bool $stopOnDeprecation, bool $stopOnError, bool $stopOnFailure, bool $stopOnIncomplete, bool $stopOnNotice, bool $stopOnRisky, bool $stopOnSkipped, bool $stopOnWarning, ?string $extensionsDirectory, bool $beStrictAboutChangesToGlobalState, bool $beStrictAboutOutputDuringTests, bool $beStrictAboutTestsThatDoNotTestAnything, bool $beStrictAboutCoverageMetadata, bool $enforceTimeLimit, int $defaultTimeLimit, int $timeoutForSmallTests, int $timeoutForMediumTests, int $timeoutForLargeTests, ?string $defaultTestSuite, int $executionOrder, bool $resolveDependencies, bool $defectsFirst, bool $backupGlobals, bool $backupStaticProperties, bool $registerMockObjectsFromTestArgumentsRecursively, bool $testdoxPrinter, bool $controlGarbageCollector, int $numberOfTestsBeforeGarbageCollection)
     {

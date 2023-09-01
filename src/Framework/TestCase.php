@@ -1461,8 +1461,9 @@ abstract class TestCase extends Assert implements Reorderable, SelfDescribing, T
      * This method is called when a test method did not execute successfully.
      *
      * @throws Throwable
+     * @return never
      */
-    protected function onNotSuccessfulTest(Throwable $t): never
+    protected function onNotSuccessfulTest(Throwable $t)
     {
         throw $t;
     }
@@ -1809,8 +1810,9 @@ abstract class TestCase extends Assert implements Reorderable, SelfDescribing, T
         return !in_array($mock, $enumerator->enumerate($this->testResult), true);
     }
 
-    private function registerMockObjectsFromTestArguments(array $testArguments, Context $context = new Context): void
+    private function registerMockObjectsFromTestArguments(array $testArguments, Context $context = null): void
     {
+        $context ??= new Context;
         if ($this->registerMockObjectsFromTestArgumentsRecursively) {
             foreach ((new Enumerator)->enumerate($testArguments) as $object) {
                 if ($object instanceof MockObject) {

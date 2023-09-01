@@ -20,9 +20,13 @@ final class RequiresPhpExtension extends Metadata
 {
     /**
      * @psalm-var non-empty-string
+     * @readonly
      */
-    private readonly string $extension;
-    private readonly ?Requirement $versionRequirement;
+    private string $extension;
+    /**
+     * @readonly
+     */
+    private ?Requirement $versionRequirement;
 
     /**
      * @psalm-param 0|1 $level

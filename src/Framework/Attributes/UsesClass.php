@@ -21,8 +21,9 @@ final class UsesClass
 {
     /**
      * @psalm-var class-string
+     * @readonly
      */
-    private readonly string $className;
+    private string $className;
 
     /**
      * @psalm-param class-string $className

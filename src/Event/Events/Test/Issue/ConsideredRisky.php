@@ -22,13 +22,20 @@ use PHPUnit\Event\Telemetry;
  */
 final class ConsideredRisky implements Event
 {
-    private readonly Telemetry\Info $telemetryInfo;
-    private readonly Code\Test $test;
+    /**
+     * @readonly
+     */
+    private Telemetry\Info $telemetryInfo;
+    /**
+     * @readonly
+     */
+    private Code\Test $test;
 
     /**
      * @psalm-var non-empty-string
+     * @readonly
      */
-    private readonly string $message;
+    private string $message;
 
     /**
      * @psalm-param non-empty-string $message

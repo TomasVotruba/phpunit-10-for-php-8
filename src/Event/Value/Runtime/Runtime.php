@@ -18,9 +18,18 @@ use function sprintf;
  */
 final class Runtime
 {
-    private readonly OperatingSystem $operatingSystem;
-    private readonly PHP $php;
-    private readonly PHPUnit $phpunit;
+    /**
+     * @readonly
+     */
+    private OperatingSystem $operatingSystem;
+    /**
+     * @readonly
+     */
+    private PHP $php;
+    /**
+     * @readonly
+     */
+    private PHPUnit $phpunit;
 
     public function __construct()
     {

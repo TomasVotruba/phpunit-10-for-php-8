@@ -18,13 +18,15 @@ final class ExcludeStaticPropertyFromBackup extends Metadata
 {
     /**
      * @psalm-var class-string
+     * @readonly
      */
-    private readonly string $className;
+    private string $className;
 
     /**
      * @psalm-var non-empty-string
+     * @readonly
      */
-    private readonly string $propertyName;
+    private string $propertyName;
 
     /**
      * @psalm-param 0|1 $level

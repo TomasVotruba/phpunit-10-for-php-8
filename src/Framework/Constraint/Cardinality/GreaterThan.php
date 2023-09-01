@@ -14,7 +14,10 @@ namespace PHPUnit\Framework\Constraint;
  */
 final class GreaterThan extends Constraint
 {
-    private readonly mixed $value;
+    /**
+     * @readonly
+     */
+    private mixed $value;
 
     public function __construct(mixed $value)
     {

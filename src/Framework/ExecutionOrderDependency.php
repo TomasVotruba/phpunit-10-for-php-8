@@ -26,8 +26,14 @@ final class ExecutionOrderDependency implements Stringable
 {
     private string $className  = '';
     private string $methodName = '';
-    private readonly bool $shallowClone;
-    private readonly bool $deepClone;
+    /**
+     * @readonly
+     */
+    private bool $shallowClone;
+    /**
+     * @readonly
+     */
+    private bool $deepClone;
 
     public static function invalid(): self
     {

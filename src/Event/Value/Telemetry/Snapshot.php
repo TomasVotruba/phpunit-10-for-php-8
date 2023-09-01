@@ -16,10 +16,22 @@ namespace PHPUnit\Event\Telemetry;
  */
 final class Snapshot
 {
-    private readonly HRTime $time;
-    private readonly MemoryUsage $memoryUsage;
-    private readonly MemoryUsage $peakMemoryUsage;
-    private readonly GarbageCollectorStatus $garbageCollectorStatus;
+    /**
+     * @readonly
+     */
+    private HRTime $time;
+    /**
+     * @readonly
+     */
+    private MemoryUsage $memoryUsage;
+    /**
+     * @readonly
+     */
+    private MemoryUsage $peakMemoryUsage;
+    /**
+     * @readonly
+     */
+    private GarbageCollectorStatus $garbageCollectorStatus;
 
     public function __construct(HRTime $time, MemoryUsage $memoryUsage, MemoryUsage $peakMemoryUsage, GarbageCollectorStatus $garbageCollectorStatus)
     {

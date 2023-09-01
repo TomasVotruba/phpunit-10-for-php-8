@@ -16,7 +16,10 @@ namespace PHPUnit\TextUI\Configuration;
  */
 final class File
 {
-    private readonly string $path;
+    /**
+     * @readonly
+     */
+    private string $path;
 
     public function __construct(string $path)
     {

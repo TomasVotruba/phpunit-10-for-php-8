@@ -228,7 +228,10 @@ final class Application
         }
     }
 
-    private function exitWithCrashMessage(Throwable $t): never
+    /**
+     * @return never
+     */
+    private function exitWithCrashMessage(Throwable $t)
     {
         $message = $t->getMessage();
 
@@ -266,14 +269,20 @@ final class Application
         exit(Result::CRASH);
     }
 
-    private function exitWithErrorMessage(string $message): never
+    /**
+     * @return never
+     */
+    private function exitWithErrorMessage(string $message)
     {
         print Version::getVersionString() . PHP_EOL . PHP_EOL . $message . PHP_EOL;
 
         exit(Result::EXCEPTION);
     }
 
-    private function execute(Command\Command $command): never
+    /**
+     * @return never
+     */
+    private function execute(Command\Command $command)
     {
         print Version::getVersionString() . PHP_EOL . PHP_EOL;
 

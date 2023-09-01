@@ -18,8 +18,14 @@ use PHPUnit\Runner\Version;
  */
 final class PHPUnit
 {
-    private readonly string $versionId;
-    private readonly string $releaseSeries;
+    /**
+     * @readonly
+     */
+    private string $versionId;
+    /**
+     * @readonly
+     */
+    private string $releaseSeries;
 
     public function __construct()
     {

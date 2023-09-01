@@ -16,7 +16,10 @@ namespace PHPUnit\TextUI\XmlConfiguration;
  */
 final class SuccessfulSchemaDetectionResult extends SchemaDetectionResult
 {
-    private readonly string $version;
+    /**
+     * @readonly
+     */
+    private string $version;
 
     public function __construct(string $version)
     {

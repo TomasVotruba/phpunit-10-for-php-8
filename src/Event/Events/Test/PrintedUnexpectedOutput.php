@@ -20,12 +20,16 @@ use PHPUnit\Event\Telemetry;
  */
 final class PrintedUnexpectedOutput implements Event
 {
-    private readonly Telemetry\Info $telemetryInfo;
+    /**
+     * @readonly
+     */
+    private Telemetry\Info $telemetryInfo;
 
     /**
      * @psalm-var non-empty-string
+     * @readonly
      */
-    private readonly string $output;
+    private string $output;
 
     /**
      * @psalm-param non-empty-string $output

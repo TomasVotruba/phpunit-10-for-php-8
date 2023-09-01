@@ -72,7 +72,10 @@ final class TestSuiteSorter
      * @psalm-var array<string, int> Associative array of (string => DEFECT_SORT_WEIGHT) elements
      */
     private array $defectSortOrder = [];
-    private readonly ResultCache $cache;
+    /**
+     * @readonly
+     */
+    private ResultCache $cache;
 
     /**
      * @psalm-var array<string> A list of normalized names of tests before reordering
