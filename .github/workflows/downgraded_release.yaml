@@ -28,7 +28,7 @@ jobs:
 
             # get rector to "rector-local" directory, to avoid downgrading itself in the /vendor
             -   run: mkdir rector-local
-            -   run: composer require rector/rector --working-dir rector-local --ansi
+            -   run: composer require rector/rector:dev-main --working-dir rector-local --ansi
 
             # downgrade /src and /vendor to PHP 8.0
             -   run: rector-local/vendor/bin/rector process src vendor --config build/rector-downgrade-php-80.php --ansi
