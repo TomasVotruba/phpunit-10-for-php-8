@@ -24,8 +24,9 @@ final class FilterDirectoryCollection implements Countable, IteratorAggregate
 {
     /**
      * @psalm-var list<FilterDirectory>
+     * @readonly
      */
-    private readonly array $directories;
+    private array $directories;
 
     /**
      * @psalm-param list<FilterDirectory> $directories

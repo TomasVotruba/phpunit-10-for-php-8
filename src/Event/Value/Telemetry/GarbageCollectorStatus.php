@@ -18,18 +18,54 @@ use PHPUnit\Event\RuntimeException;
  */
 final class GarbageCollectorStatus
 {
-    private readonly int $runs;
-    private readonly int $collected;
-    private readonly int $threshold;
-    private readonly int $roots;
-    private readonly ?float $applicationTime;
-    private readonly ?float $collectorTime;
-    private readonly ?float $destructorTime;
-    private readonly ?float $freeTime;
-    private readonly ?bool $running;
-    private readonly ?bool $protected;
-    private readonly ?bool $full;
-    private readonly ?int $bufferSize;
+    /**
+     * @readonly
+     */
+    private int $runs;
+    /**
+     * @readonly
+     */
+    private int $collected;
+    /**
+     * @readonly
+     */
+    private int $threshold;
+    /**
+     * @readonly
+     */
+    private int $roots;
+    /**
+     * @readonly
+     */
+    private ?float $applicationTime;
+    /**
+     * @readonly
+     */
+    private ?float $collectorTime;
+    /**
+     * @readonly
+     */
+    private ?float $destructorTime;
+    /**
+     * @readonly
+     */
+    private ?float $freeTime;
+    /**
+     * @readonly
+     */
+    private ?bool $running;
+    /**
+     * @readonly
+     */
+    private ?bool $protected;
+    /**
+     * @readonly
+     */
+    private ?bool $full;
+    /**
+     * @readonly
+     */
+    private ?int $bufferSize;
 
     public function __construct(int $runs, int $collected, int $threshold, int $roots, ?float $applicationTime, ?float $collectorTime, ?float $destructorTime, ?float $freeTime, ?bool $running, ?bool $protected, ?bool $full, ?int $bufferSize)
     {

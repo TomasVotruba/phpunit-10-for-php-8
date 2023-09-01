@@ -18,13 +18,15 @@ final class ClassMethod
 {
     /**
      * @psalm-var class-string
+     * @readonly
      */
-    private readonly string $className;
+    private string $className;
 
     /**
      * @psalm-var non-empty-string
+     * @readonly
      */
-    private readonly string $methodName;
+    private string $methodName;
 
     /**
      * @psalm-param class-string $className

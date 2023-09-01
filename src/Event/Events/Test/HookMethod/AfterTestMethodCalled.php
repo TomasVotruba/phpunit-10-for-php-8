@@ -21,13 +21,20 @@ use PHPUnit\Event\Telemetry;
  */
 final class AfterTestMethodCalled implements Event
 {
-    private readonly Telemetry\Info $telemetryInfo;
+    /**
+     * @readonly
+     */
+    private Telemetry\Info $telemetryInfo;
 
     /**
      * @psalm-var class-string
+     * @readonly
      */
-    private readonly string $testClassName;
-    private readonly Code\ClassMethod $calledMethod;
+    private string $testClassName;
+    /**
+     * @readonly
+     */
+    private Code\ClassMethod $calledMethod;
 
     /**
      * @psalm-param class-string $testClassName

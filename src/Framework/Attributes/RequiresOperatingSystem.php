@@ -21,8 +21,9 @@ final class RequiresOperatingSystem
 {
     /**
      * @psalm-var non-empty-string
+     * @readonly
      */
-    private readonly string $regularExpression;
+    private string $regularExpression;
 
     /**
      * @psalm-param non-empty-string $regularExpression

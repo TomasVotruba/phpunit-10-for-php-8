@@ -21,13 +21,15 @@ final class RequiresPhpExtension
 {
     /**
      * @psalm-var non-empty-string
+     * @readonly
      */
-    private readonly string $extension;
+    private string $extension;
 
     /**
      * @psalm-var null|non-empty-string
+     * @readonly
      */
-    private readonly ?string $versionRequirement;
+    private ?string $versionRequirement;
 
     /**
      * @psalm-param non-empty-string $extension

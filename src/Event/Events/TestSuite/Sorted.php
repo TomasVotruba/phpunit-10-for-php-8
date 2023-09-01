@@ -19,10 +19,22 @@ use PHPUnit\Event\Telemetry;
  */
 final class Sorted implements Event
 {
-    private readonly Telemetry\Info $telemetryInfo;
-    private readonly int $executionOrder;
-    private readonly int $executionOrderDefects;
-    private readonly bool $resolveDependencies;
+    /**
+     * @readonly
+     */
+    private Telemetry\Info $telemetryInfo;
+    /**
+     * @readonly
+     */
+    private int $executionOrder;
+    /**
+     * @readonly
+     */
+    private int $executionOrderDefects;
+    /**
+     * @readonly
+     */
+    private bool $resolveDependencies;
 
     public function __construct(Telemetry\Info $telemetryInfo, int $executionOrder, int $executionOrderDefects, bool $resolveDependencies)
     {

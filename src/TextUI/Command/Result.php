@@ -20,8 +20,14 @@ final class Result
     public const FAILURE   = 1;
     public const EXCEPTION = 2;
     public const CRASH     = 255;
-    private readonly string $output;
-    private readonly int $shellExitCode;
+    /**
+     * @readonly
+     */
+    private string $output;
+    /**
+     * @readonly
+     */
+    private int $shellExitCode;
 
     public static function from(string $output = '', int $shellExitCode = self::SUCCESS): self
     {

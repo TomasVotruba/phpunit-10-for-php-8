@@ -18,7 +18,10 @@ use ArrayAccess;
  */
 final class ArrayHasKey extends Constraint
 {
-    private readonly int|string $key;
+    /**
+     * @readonly
+     */
+    private int|string $key;
 
     public function __construct(int|string $key)
     {

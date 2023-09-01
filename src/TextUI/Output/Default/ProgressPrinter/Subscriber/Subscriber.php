@@ -14,7 +14,10 @@ namespace PHPUnit\TextUI\Output\Default\ProgressPrinter;
  */
 abstract class Subscriber
 {
-    private readonly ProgressPrinter $printer;
+    /**
+     * @readonly
+     */
+    private ProgressPrinter $printer;
 
     public function __construct(ProgressPrinter $printer)
     {

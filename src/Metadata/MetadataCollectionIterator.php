@@ -21,8 +21,9 @@ final class MetadataCollectionIterator implements Iterator
 {
     /**
      * @psalm-var list<Metadata>
+     * @readonly
      */
-    private readonly array $metadata;
+    private array $metadata;
     private int $position = 0;
 
     public function __construct(MetadataCollection $metadata)

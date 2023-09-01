@@ -25,10 +25,22 @@ use PHPUnit\Event\Telemetry;
  */
 final class Failed implements Event
 {
-    private readonly Telemetry\Info $telemetryInfo;
-    private readonly Code\Test $test;
-    private readonly Throwable $throwable;
-    private readonly ?ComparisonFailure $comparisonFailure;
+    /**
+     * @readonly
+     */
+    private Telemetry\Info $telemetryInfo;
+    /**
+     * @readonly
+     */
+    private Code\Test $test;
+    /**
+     * @readonly
+     */
+    private Throwable $throwable;
+    /**
+     * @readonly
+     */
+    private ?ComparisonFailure $comparisonFailure;
 
     public function __construct(Telemetry\Info $telemetryInfo, Code\Test $test, Throwable $throwable, ?ComparisonFailure $comparisonFailure)
     {

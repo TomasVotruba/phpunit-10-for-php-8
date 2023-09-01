@@ -21,8 +21,14 @@ use PHPUnit\Event\Telemetry;
  */
 final class Started implements Event
 {
-    private readonly Telemetry\Info $telemetryInfo;
-    private readonly Runtime $runtime;
+    /**
+     * @readonly
+     */
+    private Telemetry\Info $telemetryInfo;
+    /**
+     * @readonly
+     */
+    private Runtime $runtime;
 
     public function __construct(Telemetry\Info $telemetryInfo, Runtime $runtime)
     {

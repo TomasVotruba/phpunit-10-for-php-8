@@ -20,10 +20,22 @@ use PHPUnit\Event\Telemetry;
  */
 final class ExtensionLoadedFromPhar implements Event
 {
-    private readonly Telemetry\Info $telemetryInfo;
-    private readonly string $filename;
-    private readonly string $name;
-    private readonly string $version;
+    /**
+     * @readonly
+     */
+    private Telemetry\Info $telemetryInfo;
+    /**
+     * @readonly
+     */
+    private string $filename;
+    /**
+     * @readonly
+     */
+    private string $name;
+    /**
+     * @readonly
+     */
+    private string $version;
 
     public function __construct(Telemetry\Info $telemetryInfo, string $filename, string $name, string $version)
     {

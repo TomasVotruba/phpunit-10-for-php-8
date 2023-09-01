@@ -22,9 +22,18 @@ use PHPUnit\Event\Telemetry;
  */
 final class PhpunitWarningTriggered implements Event
 {
-    private readonly Telemetry\Info $telemetryInfo;
-    private readonly Test $test;
-    private readonly string $message;
+    /**
+     * @readonly
+     */
+    private Telemetry\Info $telemetryInfo;
+    /**
+     * @readonly
+     */
+    private Test $test;
+    /**
+     * @readonly
+     */
+    private string $message;
 
     public function __construct(Telemetry\Info $telemetryInfo, Test $test, string $message)
     {

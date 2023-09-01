@@ -20,25 +20,40 @@ use PHPUnit\Event\Telemetry;
  */
 final class MockObjectFromWsdlCreated implements Event
 {
-    private readonly Telemetry\Info $telemetryInfo;
-    private readonly string $wsdlFile;
+    /**
+     * @readonly
+     */
+    private Telemetry\Info $telemetryInfo;
+    /**
+     * @readonly
+     */
+    private string $wsdlFile;
 
     /**
      * @psalm-var class-string
+     * @readonly
      */
-    private readonly string $originalClassName;
+    private string $originalClassName;
 
     /**
      * @psalm-var class-string
+     * @readonly
      */
-    private readonly string $mockClassName;
+    private string $mockClassName;
 
     /**
      * @psalm-var list<string>
+     * @readonly
      */
-    private readonly array $methods;
-    private readonly bool $callOriginalConstructor;
-    private readonly array $options;
+    private array $methods;
+    /**
+     * @readonly
+     */
+    private bool $callOriginalConstructor;
+    /**
+     * @readonly
+     */
+    private array $options;
 
     /**
      * @psalm-param class-string $originalClassName
